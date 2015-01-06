@@ -52,3 +52,12 @@ table {
 * {
   box-sizing: border-box;
 }
+
+/* line 4, ../sass/partials/_base.sass */
+.bg {
+  background: url(../images/home.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
