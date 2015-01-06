@@ -1,6 +1,6 @@
 'use strict';
 
-app.factory('authFactory', ['$http', 'ServerUrl', '$window', function($http, ServerUrl, $window) {
+app.factory('authFactory', ['$http', 'ServerUrl', '$window', '$location', function($http, ServerUrl, $window, $location) {
 
 
   var login = function() {
@@ -15,8 +15,16 @@ app.factory('authFactory', ['$http', 'ServerUrl', '$window', function($http, Ser
       });
   };
 
+  var logout = function() {
+    return $http.get(ServerUrl + 'logout').success(function(response) {
+      $window.sessionStorage.removeItem('MusicWallet.user');
+      $location.path('/');
+    });
+  }
+
   return {
     login: login,
-    createUserSession: createUserSession
+    createUserSession: createUserSession,
+    logout: logout
   };
 }]);
