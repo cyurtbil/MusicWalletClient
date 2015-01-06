@@ -1,10 +1,8 @@
 'use strict';
 
-app.controller('LoginController', ['$scope', '$http', 'ServerUrl', '$location','$window', function($scope, $http, ServerUrl, $location, $window) {
+app.controller('LoginController', ['$scope', 'authFactory', function($scope, authFactory) {
 
-
-
-  $http.get(ServerUrl + 'cloud/get_redirect_uri').success(function(response) {
-      $scope.connect = response.url;
+  authFactory.login().then(function(response) {
+    $scope.connect = response.data.url;
   });
 }]);
