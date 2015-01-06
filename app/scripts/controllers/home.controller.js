@@ -1,14 +1,11 @@
 'use strict';
 
-app.controller('HomeController', ['$http', 
-                                  'ServerUrl', 
-                                  '$scope', 
-                                  '$location',
-                                  '$window',
+app.controller('HomeController', ['$scope',
                                   'authFactory',
-                                  function($http, ServerUrl, $scope, $location, $window, authFactory) {
+                                  function($scope, authFactory) {
 
   authFactory.createUserSession();
+
   $scope.logout = function() {
     authFactory.logout();
   };
