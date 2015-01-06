@@ -7,3 +7,33 @@
   -moz-background-size: cover
   -o-background-size: cover
   background-size: cover
+
+#login
+  #header-wrapper
+    position: relative
+    top: 182px
+    left: 10%
+    display: inline-block
+    h1
+      position: relative
+      bottom: 10px
+      color: rgb(50, 26, 19)
+      font-size: 2.2em
+    h2
+      @extend h1
+      font-size: 1.5em
+      text-align: center
+      top: 3px
+    a
+      &:hover
+        text-decoration: none
+      &[title="Connect"]
+        position: relative
+        top: 45px
+        background-color: rgb(50, 26, 19)
+        color: rgb(253, 254, 252)
+        padding: 6px 69px
+        border-radius: 30px
+        font-size: 1.4em
+        &:hover
+          background-color: rgba(138, 18, 27, 0.92)
