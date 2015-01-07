@@ -2,9 +2,16 @@
 
 app.controller('HomeController', ['$scope',
                                   'authFactory',
-                                  function($scope, authFactory) {
+                                  '$location',
+                                  function($scope, authFactory, $location) {
 
-  authFactory.createUserSession();
+  authFactory.getCurrentUser().then(function(response) {
+    if(response.data.current_user) {
+      authFactory.createUserSession(response);
+    } else {
+      $location.path('/');
+    }
+  });
 
   $(document).ready(function() {
     $('body').removeClass('bg');
