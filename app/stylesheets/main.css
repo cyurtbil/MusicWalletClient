@@ -53,12 +53,16 @@ table {
   box-sizing: border-box;
 }
 
-/* line 5, ../sass/partials/_base.sass */
+/* line 4, ../sass/partials/_base.sass */
+a {
+  text-decoration: none;
+}
+/* line 6, ../sass/partials/_base.sass */
 a:hover {
   text-decoration: none;
 }
 
-/* line 8, ../sass/partials/_base.sass */
+/* line 9, ../sass/partials/_base.sass */
 .bg {
   background: url(../images/home.png) no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -68,31 +72,27 @@ a:hover {
   opacity: 0.85;
 }
 
-/* line 18, ../sass/partials/_base.sass */
+/* line 19, ../sass/partials/_base.sass */
 #connect #header-wrapper {
   position: relative;
   top: 182px;
   left: 10%;
   display: inline-block;
 }
-/* line 23, ../sass/partials/_base.sass */
+/* line 24, ../sass/partials/_base.sass */
 #connect #header-wrapper h1, #connect #header-wrapper h2 {
   position: relative;
   bottom: 10px;
   color: #321a13;
   font-size: 2.2em;
 }
-/* line 28, ../sass/partials/_base.sass */
+/* line 29, ../sass/partials/_base.sass */
 #connect #header-wrapper h2 {
   font-size: 1.5em;
   text-align: center;
   top: 3px;
 }
-/* line 34, ../sass/partials/_base.sass */
-#connect #header-wrapper a:hover {
-  text-decoration: none;
-}
-/* line 36, ../sass/partials/_base.sass */
+/* line 35, ../sass/partials/_base.sass */
 #connect #header-wrapper a[title="Connect"] {
   position: relative;
   top: 45px;
@@ -102,7 +102,7 @@ a:hover {
   border-radius: 30px;
   font-size: 1.4em;
 }
-/* line 44, ../sass/partials/_base.sass */
+/* line 43, ../sass/partials/_base.sass */
 #connect #header-wrapper a[title="Connect"]:hover {
   background-color: rgba(138, 18, 27, 0.92);
 }

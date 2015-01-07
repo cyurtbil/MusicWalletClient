@@ -12,6 +12,12 @@ app.config(['$routeProvider', function($routeProvider) {
   .when('/search', {
     templateUrl: 'templates/search.html'
   })
+  .when('/who', {
+    templateUrl: 'templates/who.html'
+  })
+  .when('/profile/:id', {
+    templateUrl: 'templates/profile.html'
+  })
   .otherwise({
     redirectTo: '/'
   });
