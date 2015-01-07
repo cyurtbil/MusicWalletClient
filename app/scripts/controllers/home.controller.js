@@ -5,14 +5,6 @@ app.controller('HomeController', ['$scope',
                                   '$location',
                                   function($scope, authFactory, $location) {
 
-  authFactory.getCurrentUser().then(function(response) {
-    if(response.data.current_user) {
-      authFactory.createUserSession(response);
-    } else {
-      $location.path('/');
-    }
-  });
-
   $(document).ready(function() {
     $('body').removeClass('bg');
   });
