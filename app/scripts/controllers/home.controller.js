@@ -8,8 +8,4 @@ app.controller('HomeController', ['$scope',
   $(document).ready(function() {
     $('body').removeClass('bg');
   });
-
-  $scope.logout = function() {
-    authFactory.logout();
-  };
 }]);
