@@ -53,7 +53,12 @@ table {
   box-sizing: border-box;
 }
 
-/* line 4, ../sass/partials/_base.sass */
+/* line 5, ../sass/partials/_base.sass */
+a:hover {
+  text-decoration: none;
+}
+
+/* line 8, ../sass/partials/_base.sass */
 .bg {
   background: url(../images/home.png) no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -63,31 +68,31 @@ table {
   opacity: 0.85;
 }
 
-/* line 13, ../sass/partials/_base.sass */
+/* line 18, ../sass/partials/_base.sass */
 #connect #header-wrapper {
   position: relative;
   top: 182px;
   left: 10%;
   display: inline-block;
 }
-/* line 18, ../sass/partials/_base.sass */
+/* line 23, ../sass/partials/_base.sass */
 #connect #header-wrapper h1, #connect #header-wrapper h2 {
   position: relative;
   bottom: 10px;
   color: #321a13;
   font-size: 2.2em;
 }
-/* line 23, ../sass/partials/_base.sass */
+/* line 28, ../sass/partials/_base.sass */
 #connect #header-wrapper h2 {
   font-size: 1.5em;
   text-align: center;
   top: 3px;
 }
-/* line 29, ../sass/partials/_base.sass */
+/* line 34, ../sass/partials/_base.sass */
 #connect #header-wrapper a:hover {
   text-decoration: none;
 }
-/* line 31, ../sass/partials/_base.sass */
+/* line 36, ../sass/partials/_base.sass */
 #connect #header-wrapper a[title="Connect"] {
   position: relative;
   top: 45px;
@@ -97,7 +102,54 @@ table {
   border-radius: 30px;
   font-size: 1.4em;
 }
-/* line 39, ../sass/partials/_base.sass */
+/* line 44, ../sass/partials/_base.sass */
 #connect #header-wrapper a[title="Connect"]:hover {
   background-color: rgba(138, 18, 27, 0.92);
+}
+
+/* line 47, ../sass/partials/_base.sass */
+#navbar-wrapper, #navbar-wrapper #navbar {
+  height: 55px;
+  width: 100%;
+}
+/* line 50, ../sass/partials/_base.sass */
+#navbar-wrapper #navbar {
+  background-color: #321a13;
+}
+/* line 53, ../sass/partials/_base.sass */
+#navbar-wrapper #navbar li {
+  display: inline-block;
+}
+/* line 55, ../sass/partials/_base.sass */
+#navbar-wrapper #navbar li:hover {
+  box-shadow: 0px 0px 10px 1px rgba(138, 18, 27, 0.92);
+  cursor: pointer;
+}
+/* line 58, ../sass/partials/_base.sass */
+#navbar-wrapper #navbar li a {
+  color: #fdfefc;
+}
+/* line 60, ../sass/partials/_base.sass */
+#navbar-wrapper #navbar ul#left-side {
+  float: left;
+  width: 60%;
+}
+/* line 63, ../sass/partials/_base.sass */
+#navbar-wrapper #navbar ul#left-side li {
+  float: left;
+  margin-left: 10%;
+  padding: 19.5px 3%;
+  font-size: 1.03em;
+}
+/* line 68, ../sass/partials/_base.sass */
+#navbar-wrapper #navbar ul#right-side {
+  float: right;
+  width: 40%;
+}
+/* line 71, ../sass/partials/_base.sass */
+#navbar-wrapper #navbar ul#right-side li {
+  float: right;
+  margin-right: 13%;
+  padding: 19.5px 3%;
+  font-size: 1.03em;
 }

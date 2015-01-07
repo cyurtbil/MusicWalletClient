@@ -1,6 +1,10 @@
 *
   box-sizing: border-box
 
+a
+  &:hover
+    text-decoration: none
+// Home Page
 .bg
   background: url(../images/home.png) no-repeat center center fixed
   -webkit-background-size: cover
@@ -9,6 +13,7 @@
   background-size: cover
   opacity: 0.85
 
+// Home Page Headers
 #connect
   #header-wrapper
     position: relative
@@ -38,3 +43,36 @@
         font-size: 1.4em
         &:hover
           background-color: rgba(138, 18, 27, 0.92)
+
+#navbar-wrapper
+  height: 55px
+  width: 100%
+  #navbar
+    @extend #navbar-wrapper
+    background-color: rgb(50, 26, 19)
+    li
+      display: inline-block
+      &:hover
+        box-shadow: 0px 0px 10px 1px rgba(138, 18, 27, 0.92)
+        cursor: pointer
+      a
+        color: rgb(253, 254, 252)
+    ul#left-side
+      float: left
+      width: 60%
+      li
+        float: left
+        margin-left: 10%
+        padding: 19.5px 3%
+        font-size: 1.03em
+    ul#right-side
+      float: right
+      width: 40%
+      li
+        float: right
+        margin-right: 13%
+        padding: 19.5px 3%
+        font-size: 1.03em
+
+
+
