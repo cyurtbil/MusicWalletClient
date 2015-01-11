@@ -153,3 +153,18 @@ a:hover {
   padding: 19.5px 3%;
   font-size: 1.03em;
 }
+
+/* line 77, ../sass/partials/_base.sass */
+span.wallet-name {
+  position: relative;
+  display: inline-block;
+  margin: 10px 0% 2px 0.5%;
+  background-color: #8e1e1e;
+  padding: 5px 26px;
+  border-radius: 3px;
+}
+/* line 84, ../sass/partials/_base.sass */
+span.wallet-name a {
+  font-size: 1.03em;
+  color: rgba(255, 255, 255, 0.93);
+}
