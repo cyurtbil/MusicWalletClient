@@ -10,8 +10,13 @@ app.factory('dataFactory', ['$http', 'ServerUrl', function($http, ServerUrl) {
     return $http.post(ServerUrl + 'cloud/get_tracks', input);
   };
 
+  var fetchUsers = function() {
+    return $http.get(ServerUrl + 'users.json');
+  };
+
   return {
     fetchWallets: fetchWallets,
-    fetchTracksFromCloud: fetchTracksFromCloud
+    fetchTracksFromCloud: fetchTracksFromCloud,
+    fetchUsers: fetchUsers
   };
 }]);

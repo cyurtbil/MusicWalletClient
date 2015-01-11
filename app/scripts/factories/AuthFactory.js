@@ -18,7 +18,6 @@ app.factory('authFactory', ['$http', 'ServerUrl', '$window', '$location', functi
   var logout = function() {
     return $http.get(ServerUrl + 'logout').success(function(response) {
       $window.sessionStorage.removeItem('MusicWallet.user');
-      $location.path('/');
     });
   };
 
