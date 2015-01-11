@@ -1,5 +1,13 @@
 <ng-include src="'templates/navbar.html'"></ng-include>
 
 <div ng-controller="SearchController">
+
+  <form name="searchSongForm" ng-submit="searchSongs(params)">
+    <input type="text" name="search-bar" placeholder="Search Songs by Name" ng-model="params.input">
+    <input type="submit" name="search" value="Search">
+  </form>
+  <div ng-repeat="source in trackSources">
+    <iframe width="100%" height="400" scrolling="no" frameborder="no" src="{{fixUrl(source)}}"></iframe>
+  </div>
   
 </div>

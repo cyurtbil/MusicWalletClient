@@ -6,7 +6,12 @@ app.factory('dataFactory', ['$http', 'ServerUrl', function($http, ServerUrl) {
     return $http.get(ServerUrl + 'wallets.json');
   };
 
+  var fetchTracksFromCloud = function(input) {
+    return $http.post(ServerUrl + 'cloud/get_tracks', input);
+  };
+
   return {
-    fetchWallets: fetchWallets
+    fetchWallets: fetchWallets,
+    fetchTracksFromCloud: fetchTracksFromCloud
   };
 }]);
