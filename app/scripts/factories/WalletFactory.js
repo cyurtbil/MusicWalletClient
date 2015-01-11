@@ -7,8 +7,7 @@ app.factory('walletFactory', [function() {
     for(var i = 0; i < wallets.length; i++) {
       walletNames.push(wallets[i].name);
     };
-
-    return $.unique(walletNames);
+    return walletNames.filter(function(walletName, index, self) {return self.indexOf(walletName) === index;});
   };
 
   return {

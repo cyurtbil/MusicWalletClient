@@ -164,6 +164,10 @@ span.wallet-name {
   border-radius: 3px;
 }
 /* line 84, ../sass/partials/_base.sass */
+span.wallet-name:hover {
+  background-color: rgba(138, 18, 27, 0.92);
+}
+/* line 86, ../sass/partials/_base.sass */
 span.wallet-name a {
   font-size: 1.03em;
   color: rgba(255, 255, 255, 0.93);
