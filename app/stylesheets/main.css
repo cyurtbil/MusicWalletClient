@@ -114,47 +114,50 @@ a:hover {
 }
 /* line 50, ../sass/partials/_base.sass */
 #navbar-wrapper #navbar {
-  background-color: #321a13;
+  background-color: rgba(11, 5, 1, 0.9);
 }
 /* line 53, ../sass/partials/_base.sass */
 #navbar-wrapper #navbar li {
   display: inline-block;
+  -webkit-transition: box-shadow 0.5s ease;
+  -moz-transition: box-shadow 0.5s ease;
+  transition: box-shadow 0.5s ease;
 }
-/* line 55, ../sass/partials/_base.sass */
+/* line 56, ../sass/partials/_base.sass */
 #navbar-wrapper #navbar li:hover {
-  box-shadow: 0px 0px 10px 1px rgba(138, 18, 27, 0.92);
+  box-shadow: inset 0px -2px 31px 17px rgba(138, 18, 27, 0.92);
   cursor: pointer;
 }
-/* line 58, ../sass/partials/_base.sass */
+/* line 59, ../sass/partials/_base.sass */
 #navbar-wrapper #navbar li a {
-  color: #fdfefc;
+  color: rgba(253, 254, 252, 0.91);
 }
-/* line 60, ../sass/partials/_base.sass */
-#navbar-wrapper #navbar ul#left-side {
+/* line 61, ../sass/partials/_base.sass */
+#navbar-wrapper #navbar ul#left-nav {
   float: left;
   width: 60%;
 }
-/* line 63, ../sass/partials/_base.sass */
-#navbar-wrapper #navbar ul#left-side li {
+/* line 64, ../sass/partials/_base.sass */
+#navbar-wrapper #navbar ul#left-nav li {
   float: left;
   margin-left: 10%;
   padding: 19.5px 3%;
   font-size: 1.03em;
 }
-/* line 68, ../sass/partials/_base.sass */
-#navbar-wrapper #navbar ul#right-side {
+/* line 69, ../sass/partials/_base.sass */
+#navbar-wrapper #navbar ul#right-nav {
   float: right;
   width: 40%;
 }
-/* line 71, ../sass/partials/_base.sass */
-#navbar-wrapper #navbar ul#right-side li {
+/* line 72, ../sass/partials/_base.sass */
+#navbar-wrapper #navbar ul#right-nav li {
   float: right;
   margin-right: 13%;
   padding: 19.5px 3%;
   font-size: 1.03em;
 }
 
-/* line 77, ../sass/partials/_base.sass */
+/* line 78, ../sass/partials/_base.sass */
 span.wallet-name {
   position: relative;
   display: inline-block;
@@ -163,12 +166,31 @@ span.wallet-name {
   padding: 5px 26px;
   border-radius: 3px;
 }
-/* line 84, ../sass/partials/_base.sass */
+/* line 85, ../sass/partials/_base.sass */
 span.wallet-name:hover {
   background-color: rgba(138, 18, 27, 0.92);
 }
-/* line 86, ../sass/partials/_base.sass */
+/* line 87, ../sass/partials/_base.sass */
 span.wallet-name a {
   font-size: 1.03em;
   color: rgba(255, 255, 255, 0.93);
+}
+
+/* line 93, ../sass/partials/_base.sass */
+#profile-wrapper #left-side {
+  position: fixed;
+  float: left;
+  clear: right;
+  width: 30%;
+  height: 100%;
+  border: 1px solid black;
+}
+/* line 100, ../sass/partials/_base.sass */
+#profile-wrapper #right-side {
+  position: relative;
+  float: right;
+  width: 70%;
+  clear: left;
+  height: 900px;
+  border: 1px solid black;
 }

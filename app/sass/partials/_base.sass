@@ -49,15 +49,16 @@ a
   width: 100%
   #navbar
     @extend #navbar-wrapper
-    background-color: rgb(50, 26, 19)
+    background-color: rgba(11, 5, 1, 0.9)
     li
       display: inline-block
+      +transition(box-shadow, 0.5s, ease)
       &:hover
-        box-shadow: 0px 0px 10px 1px rgba(138, 18, 27, 0.92)
+        box-shadow: inset 0px -2px 31px 17px rgba(138, 18, 27, 0.92)
         cursor: pointer
       a
-        color: rgb(253, 254, 252)
-    ul#left-side
+        color: rgba(253, 254, 252, 0.91)
+    ul#left-nav
       float: left
       width: 60%
       li
@@ -65,7 +66,7 @@ a
         margin-left: 10%
         padding: 19.5px 3%
         font-size: 1.03em
-    ul#right-side
+    ul#right-nav
       float: right
       width: 40%
       li
@@ -87,4 +88,19 @@ span.wallet-name
     font-size: 1.03em
     color: rgba(255, 255, 255, 0.93)
 
-
+// Profile Page
+#profile-wrapper
+  #left-side
+    position: fixed
+    float: left
+    clear: right
+    width: 30%
+    height: 100%
+    border: 1px solid black
+  #right-side
+    position: relative
+    float: right
+    width: 70%
+    clear: left
+    height: 900px
+    border: 1px solid black
