@@ -5,10 +5,10 @@
         <li><a href="#/home" title="home">MusicWallet</a></li>
         <li><a href="#/who" title="who">Who?</a></li>
         <li><a href="#/search" title="search">Search</a></li>
+        <li><a ng-href="#/profile/{{currentUser.id}}" title="profile">Profile</a></li>
       </ul>
       <ul id="right-nav">
         <li><a href="#/" title="logout" ng-click="logout()">Logout</a>
-        <li><a ng-href="#/profile/{{currentUser.id}}" title="profile">Profile</a></li>
         </li>
       </ul>
     </div>

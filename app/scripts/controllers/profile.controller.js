@@ -6,5 +6,5 @@ app.controller('ProfileController', ['$scope', 'dataFactory', 'userFactory', fun
     $scope.currentUser = userFactory.findCurrentUser(response.data.users);
   });
 
-  
+
 }]);
