@@ -191,49 +191,66 @@ span.wallet-name a {
   background-color: #4b2221;
 }
 /* line 102, ../sass/partials/_base.sass */
-#profile-wrapper #left-side #sidebar-left {
+#profile-wrapper #left-side #user-info-wrapper {
+  position: relative;
+  height: 206px;
+}
+/* line 105, ../sass/partials/_base.sass */
+#profile-wrapper #left-side #user-info-wrapper #sidebar-left {
   float: left;
   width: 50%;
   position: relative;
   top: 29px;
   left: 8%;
 }
-/* line 108, ../sass/partials/_base.sass */
-#profile-wrapper #left-side #sidebar-left img {
+/* line 111, ../sass/partials/_base.sass */
+#profile-wrapper #left-side #user-info-wrapper #sidebar-left img {
   height: 150px;
   width: 150px;
   border-radius: 2px;
   box-shadow: 0px 0px 13px 0px rgba(255, 255, 255, 0.11);
 }
-/* line 113, ../sass/partials/_base.sass */
-#profile-wrapper #left-side #sidebar-right {
+/* line 116, ../sass/partials/_base.sass */
+#profile-wrapper #left-side #user-info-wrapper #sidebar-right {
   float: right;
   width: 50%;
   position: relative;
   top: 50px;
 }
-/* line 118, ../sass/partials/_base.sass */
-#profile-wrapper #left-side #sidebar-right div {
+/* line 121, ../sass/partials/_base.sass */
+#profile-wrapper #left-side #user-info-wrapper #sidebar-right div {
   margin: 19px 16%;
 }
-/* line 120, ../sass/partials/_base.sass */
-#profile-wrapper #left-side #sidebar-right div:nth-child(1) {
+/* line 123, ../sass/partials/_base.sass */
+#profile-wrapper #left-side #user-info-wrapper #sidebar-right div:nth-child(1) {
   font-size: 1.5em;
 }
-/* line 122, ../sass/partials/_base.sass */
-#profile-wrapper #left-side #user-wallets {
-  position: relative;
-  top: 200px;
-}
 /* line 125, ../sass/partials/_base.sass */
-#profile-wrapper #left-side #user-wallets h4 {
-  display: inline-block;
-  position: relative;
-  bottom: 122px;
-  right: 10%;
+#profile-wrapper #left-side #user-wallets-wrapper {
+  margin: 0px;
+}
+/* line 128, ../sass/partials/_base.sass */
+#profile-wrapper #left-side #user-wallets-wrapper h4 {
   font-size: 1.3em;
+  text-align: center;
 }
 /* line 131, ../sass/partials/_base.sass */
+#profile-wrapper #left-side #user-wallets-wrapper ul {
+  text-align: center;
+  overflow-y: scroll;
+  height: 200px;
+  box-shadow: 0px 0px 1px 0px white;
+}
+/* line 136, ../sass/partials/_base.sass */
+#profile-wrapper #left-side #user-wallets-wrapper ul li {
+  padding: 10px 0%;
+}
+/* line 138, ../sass/partials/_base.sass */
+#profile-wrapper #left-side #user-wallets-wrapper ul li:hover {
+  cursor: pointer;
+  background-color: #7C2F2D;
+}
+/* line 141, ../sass/partials/_base.sass */
 #profile-wrapper #right-side {
   position: relative;
   float: right;

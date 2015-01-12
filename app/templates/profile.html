@@ -3,16 +3,23 @@
 <div ng-controller="ProfileController">
   <div id="profile-wrapper">
     <div id="left-side">
-      <div id="sidebar-left">
-        <img src="{{currentUser.image_url}}" alt="Profile Picture">
+      <div id="user-info-wrapper">
+        <div id="sidebar-left">
+          <img src="{{currentUser.image_url}}" alt="Profile Picture">
+        </div>
+        <div id="sidebar-right">
+          <div>{{currentUser.username}}</div>
+          <div><strong>Followings: </strong>{{currentUser.followings_count}}</div>
+          <div><strong>Followers: </strong>{{currentUser.followers_count}}</div>
+        </div>
       </div>
-      <div id="sidebar-right">
-        <div>{{currentUser.username}}</div>
-        <div><strong>Followings: </strong>{{currentUser.followings_count}}</div>
-        <div><strong>Followers: </strong>{{currentUser.followers_count}}</div>
-      </div>
-      <div id="user-wallets">
+      <div id="user-wallets-wrapper">
+        <hr>
         <h4>Wallets</h4>
+        <hr>
+        <ul>
+          <li ng-repeat="wallet in currentUser.wallets">{{wallet.name}}</li>
+        </ul>
       </div>
     </div>
     <div id="right-side">
