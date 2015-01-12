@@ -176,7 +176,11 @@ span.wallet-name a {
   color: rgba(255, 255, 255, 0.93);
 }
 
-/* line 93, ../sass/partials/_base.sass */
+/* line 92, ../sass/partials/_base.sass */
+#profile-wrapper {
+  color: white;
+}
+/* line 94, ../sass/partials/_base.sass */
 #profile-wrapper #left-side {
   position: fixed;
   float: left;
@@ -186,7 +190,7 @@ span.wallet-name a {
   box-shadow: 0px 0px 26px 0px rgba(0, 0, 0, 0.66);
   background-color: #4b2221;
 }
-/* line 101, ../sass/partials/_base.sass */
+/* line 102, ../sass/partials/_base.sass */
 #profile-wrapper #left-side #sidebar-left {
   float: left;
   width: 50%;
@@ -194,16 +198,15 @@ span.wallet-name a {
   top: 29px;
   left: 8%;
 }
-/* line 107, ../sass/partials/_base.sass */
+/* line 108, ../sass/partials/_base.sass */
 #profile-wrapper #left-side #sidebar-left img {
   height: 150px;
   width: 150px;
   border-radius: 2px;
   box-shadow: 0px 0px 13px 0px rgba(255, 255, 255, 0.11);
 }
-/* line 112, ../sass/partials/_base.sass */
+/* line 113, ../sass/partials/_base.sass */
 #profile-wrapper #left-side #sidebar-right {
-  color: white;
   float: right;
   width: 50%;
   position: relative;
@@ -218,6 +221,19 @@ span.wallet-name a {
   font-size: 1.5em;
 }
 /* line 122, ../sass/partials/_base.sass */
+#profile-wrapper #left-side #user-wallets {
+  position: relative;
+  top: 200px;
+}
+/* line 125, ../sass/partials/_base.sass */
+#profile-wrapper #left-side #user-wallets h4 {
+  display: inline-block;
+  position: relative;
+  bottom: 122px;
+  right: 10%;
+  font-size: 1.3em;
+}
+/* line 131, ../sass/partials/_base.sass */
 #profile-wrapper #right-side {
   position: relative;
   float: right;
