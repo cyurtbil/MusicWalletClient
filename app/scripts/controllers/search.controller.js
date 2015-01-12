@@ -1,6 +1,14 @@
 'use strict';
 
-app.controller('SearchController', ['$scope', 'dataFactory', '$sce', function($scope, dataFactory, $sce) {
+app.controller('SearchController', ['$scope',
+                                    'dataFactory',
+                                    '$sce',
+                                    'userFactory',
+                                    function($scope, dataFactory, $sce, userFactory) {
+
+  dataFactory.fetchUsers().then(function(response) {
+    $scope.currentUser = userFactory.findCurrentUser(response.data.users);
+  });
 
   $scope.searchSongs = function(params) {
     dataFactory.fetchTracksFromCloud(params).then(function(response) {
@@ -10,6 +18,10 @@ app.controller('SearchController', ['$scope', 'dataFactory', '$sce', function($s
 
   $scope.fixUrl = function(source) {
     return $sce.trustAsResourceUrl(source);
+  };
+
+  $scope.addToWallet = function(wallet, source) {
+    debugger
   };
 
 }]);
