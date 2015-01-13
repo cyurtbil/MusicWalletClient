@@ -4,7 +4,8 @@ app.controller('SearchController', ['$scope',
                                     'dataFactory',
                                     '$sce',
                                     'userFactory',
-                                    function($scope, dataFactory, $sce, userFactory) {
+                                    'songFactory',
+                                    function($scope, dataFactory, $sce, userFactory, songFactory) {
 
   dataFactory.fetchUsers().then(function(response) {
     $scope.currentUser = userFactory.findCurrentUser(response.data.users);
@@ -21,7 +22,10 @@ app.controller('SearchController', ['$scope',
   };
 
   $scope.addToWallet = function(wallet, source) {
-    debugger
+    songFactory.addSong(wallet, source).then(function(response) {
+      var removedElementIndex = $scope.trackSources.indexOf(response.data.name);
+      $scope.trackSources.splice(removedElementIndex, 1);
+    });
   };
 
 }]);
