@@ -6,10 +6,15 @@ app.controller('HomeController', ['$scope',
                                   'dataFactory',
                                   'walletFactory',
                                   '$sce',
-                                  function($scope, authFactory, $location, dataFactory, walletFactory, $sce) {
+                                  'userFactory',
+                                  function($scope, authFactory, $location, dataFactory, walletFactory, $sce, userFactory) {
 
   $(document).ready(function() {
     $('body').removeClass('bg');
+  });
+
+  dataFactory.fetchUsers().then(function(response) {
+    $scope.currentUser = userFactory.findCurrentUser(response.data.users);
   });
 
   dataFactory.fetchWallets().then(function(response) {
@@ -21,9 +26,11 @@ app.controller('HomeController', ['$scope',
     var clickedWallet = $scope.wallets.filter(function(wallet) {return wallet.name === walletName;});
     $scope.walletSongs = [];
     clickedWallet.forEach(function(wallet) {
-      wallet.songs.forEach(function(song) {
-        $scope.walletSongs.push(song);
-      });
+      if(wallet.user_id !== $scope.currentUser.id) {
+        wallet.songs.forEach(function(song) {
+          $scope.walletSongs.push(song);
+        });
+      }
     });
   };
 
