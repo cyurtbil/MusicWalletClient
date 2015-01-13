@@ -13,6 +13,7 @@ app.controller('ProfileController', ['$scope',
 
   $scope.viewSongs = function(wallet) {
     walletFactory.getWallet(wallet).then(function(response) {
+      $scope.wallet = response.data;
       $scope.walletSongs = response.data.songs;
     });
   }; 

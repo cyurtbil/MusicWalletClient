@@ -11,7 +11,6 @@ app.factory('walletFactory', ['$http', 'ServerUrl', function($http, ServerUrl) {
   };
 
   var getWallet = function(wallet) {
-    debugger
     return $http.get(ServerUrl + 'wallets/' + wallet.id + '.json');
   };
 
