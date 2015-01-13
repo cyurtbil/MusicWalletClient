@@ -18,12 +18,14 @@
         <h4>Wallets</h4>
         <hr>
         <ul>
-          <li ng-repeat="wallet in currentUser.wallets">{{wallet.name}}</li>
+          <li ng-repeat="wallet in currentUser.wallets" ng-click="viewSongs(wallet)">{{wallet.name}}</li>
         </ul>
       </div>
     </div>
     <div id="right-side">
-      
+      <div ng-repeat="song in walletSongs">
+      <iframe width="100%" height="200" style="margin: 10px 0%;" scrolling="no" frameborder="no" src="{{fixUrl(song.name)}}"></iframe>
+      </div>
     </div>
   </div>
 </div>

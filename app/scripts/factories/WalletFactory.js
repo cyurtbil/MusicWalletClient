@@ -1,6 +1,6 @@
 'use strict';
 
-app.factory('walletFactory', [function() {
+app.factory('walletFactory', ['$http', 'ServerUrl', function($http, ServerUrl) {
 
   var createUniqueWalletNamesArray = function(wallets) {
     var walletNames = [];
@@ -10,7 +10,13 @@ app.factory('walletFactory', [function() {
     return walletNames.filter(function(walletName, index, self) {return self.indexOf(walletName) === index;});
   };
 
+  var getWallet = function(wallet) {
+    debugger
+    return $http.get(ServerUrl + 'wallets/' + wallet.id + '.json');
+  };
+
   return {
-    createUniqueWalletNamesArray: createUniqueWalletNamesArray
+    createUniqueWalletNamesArray: createUniqueWalletNamesArray,
+    getWallet: getWallet
   };
 }]);
