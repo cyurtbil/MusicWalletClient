@@ -1,6 +1,9 @@
 <ng-include src="'templates/navbar.html'"></ng-include>
 
 <div ng-controller="HomeController">
-  <span ng-repeat="walletName in uniqueWalletNames track by $index" class="wallet-name"><a href="#/home" title="{{walletName}}">{{walletName}}</a></span>
+  <span ng-repeat="walletName in uniqueWalletNames track by $index" class="wallet-name"><a href="#/home" title="{{walletName}}" ng-click="viewSongsOfAll(walletName)">{{walletName}}</a></span>
   <hr>
+  <div ng-repeat="song in walletSongs">
+    <iframe width="100%" height="200" style="margin: 10px 0%;" scrolling="no" frameborder="no" src="{{fixUrl(song.name)}}"></iframe>
+  </div>
 </div>
