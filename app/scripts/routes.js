@@ -6,7 +6,7 @@ app.config(['$routeProvider', function($routeProvider) {
   .when('/', {
     templateUrl: 'templates/connect.html'
   })
-  .when('/home', {
+  .when('/home/:username', {
     templateUrl: 'templates/home.html'
   })
   .when('/search', {

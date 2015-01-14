@@ -6,8 +6,8 @@ app.factory('authFactory', ['$http', 'ServerUrl', '$window', '$location', functi
     return $http.get(ServerUrl + 'cloud/get_redirect_uri');
   };
 
-  var getCurrentUser = function() {
-    return $http.get(ServerUrl + 'users/get_current_user');
+  var getCurrentUser = function(username) {
+    return $http.post(ServerUrl + 'users/get_current_user', {username: username});
   };
 
   var createUserSession = function(response) {
@@ -15,10 +15,8 @@ app.factory('authFactory', ['$http', 'ServerUrl', '$window', '$location', functi
     setHeaderAuthorization();
   };
 
-  var logout = function() {
-    return $http.get(ServerUrl + 'logout').success(function(response) {
-      $window.sessionStorage.removeItem('MusicWallet.user');
-    });
+  var logout = function(currentUser) {
+    return $http.post(ServerUrl + 'logout', {current_user: currentUser});
   };
 
   var isAuthenticated = function() {
