@@ -9,7 +9,8 @@ app.run(['$rootScope', '$window', '$http', 'authFactory', '$location', function(
   $rootScope.$on('$routeChangeStart', function(event, next) {
     var lastSlashIndex = window.location.hash.lastIndexOf('/');
     var currentUserName = window.location.hash.substring(lastSlashIndex + 1);
-    authFactory.getCurrentUser(currentUserName).then(function(response) {
+    var encodedData = window.btoa(currentUserName);
+    authFactory.getCurrentUser(encodedData).then(function(response) {
       response.data.current_user ? authFactory.createUserSession(response) : $location.path('/');
     }, function(reason) {
       console.log(reason);
