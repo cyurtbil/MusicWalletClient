@@ -10,10 +10,9 @@ app.run(['$rootScope', '$window', '$http', 'authFactory', '$location', function(
     var lastSlashIndex = window.location.hash.lastIndexOf('/');
     var currentUserName = window.location.hash.substring(lastSlashIndex + 1);
     authFactory.getCurrentUser(currentUserName).then(function(response) {
-      debugger
       response.data.current_user ? authFactory.createUserSession(response) : $location.path('/');
     }, function(reason) {
-      console.log('Unauthorized!!!');
+      console.log(reason);
       $location.path('/');
     });
   });

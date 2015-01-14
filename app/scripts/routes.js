@@ -9,13 +9,13 @@ app.config(['$routeProvider', function($routeProvider) {
   .when('/home/:username', {
     templateUrl: 'templates/home.html'
   })
-  .when('/search', {
+  .when('/search/:username', {
     templateUrl: 'templates/search.html'
   })
-  .when('/who', {
+  .when('/who/:username', {
     templateUrl: 'templates/who.html'
   })
-  .when('/profile/:id', {
+  .when('/profile/:username', {
     templateUrl: 'templates/profile.html'
   })
   .otherwise({
