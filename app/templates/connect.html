@@ -4,7 +4,12 @@
     <h1>Welcome to MusicWallet</h1>
 
     <h2>The Address for Quality Sounds</h2>
-
-    <a href="#" title="Connect" ng-click="connectToCloud($event)">Connect With SoundCloud</a>
   </div>
+
+  <form name="userRegisterationForm" ng-submit="registerUser(user)" novalidate>
+    <input type="text" name="username" placeholder="Enter Username">
+    <input type="text" name="password" placeholder="Enter Password">
+    <input type="text" name="password-confirmation" placeholder="Re-enter Password">
+    <input type="submit" name="register" value="Register">
+  </form>
 </div>
