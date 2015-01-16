@@ -6,17 +6,13 @@ app.factory('authFactory', ['$http', 'ServerUrl', '$window', '$location', functi
     return $http.get(ServerUrl + 'cloud/get_redirect_uri');
   };
 
-  var getCurrentUser = function() {
-    return $http.get(ServerUrl + 'users/get_current_user');
-  };
-
   var createUserSession = function(response) {
-    $window.sessionStorage.setItem('MusicWallet.user', response.data.current_user.token);
+    $window.sessionStorage.setItem('MusicWallet.user', response.token);
     setHeaderAuthorization();
   };
 
-  var logout = function(currentUser) {
-    return $http.post(ServerUrl + 'logout', {current_user: currentUser});
+  var logout = function() {
+    return $http.get(ServerUrl + 'logout');
   };
 
   var isAuthenticated = function() {
@@ -32,7 +28,6 @@ app.factory('authFactory', ['$http', 'ServerUrl', '$window', '$location', functi
     createUserSession: createUserSession,
     logout: logout,
     isAuthenticated: isAuthenticated,
-    setHeaderAuthorization: setHeaderAuthorization,
-    getCurrentUser: getCurrentUser
+    setHeaderAuthorization: setHeaderAuthorization
   };
 }]);

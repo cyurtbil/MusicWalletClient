@@ -1,0 +1,15 @@
+<div ng-controller="RegisterController" id="connect">
+
+  <div id="header-wrapper">
+    <h1>Welcome to MusicWallet</h1>
+
+    <h2>The Address for Quality Sounds</h2>
+  </div>
+
+  <form name="userRegistrationForm" ng-submit="registerUser(user)" novalidate>
+    <input type="text" name="username" placeholder="Enter Username" ng-model="user.username" required>
+    <input type="text" name="password" placeholder="Enter Password" ng-model="user.password" required>
+    <input type="text" name="password-confirmation" placeholder="Re-enter Password" ng-model="user.password_confirmation" required>
+    <input type="submit" name="register" value="Register" ng-disabled="userRegistrationForm.$invalid">
+  </form>
+</div>

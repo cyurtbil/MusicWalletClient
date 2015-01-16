@@ -3,10 +3,10 @@
 app.config(['$routeProvider', function($routeProvider) {
 
   $routeProvider
-  .when('/', {
-    templateUrl: 'templates/connect.html'
+  .when('/register', {
+    templateUrl: 'templates/register.html'
   })
-  .when('/home', {
+  .when('/', {
     templateUrl: 'templates/home.html'
   })
   .when('/search', {
@@ -19,6 +19,6 @@ app.config(['$routeProvider', function($routeProvider) {
     templateUrl: 'templates/profile.html'
   })
   .otherwise({
-    redirectTo: '/'
+    redirectTo: '/login'
   });
 }]);

@@ -1,6 +1,6 @@
 'use strict';
 
-app.factory('userFactory', ['$window', function($window) {
+app.factory('userFactory', ['$window', '$http', 'ServerUrl', function($window, $http, ServerUrl) {
 
   var findCurrentUser = function(users) {
     var token =  getToken();
@@ -12,7 +12,12 @@ app.factory('userFactory', ['$window', function($window) {
     return $window.sessionStorage.getItem('MusicWallet.user');
   };
 
+  var registerUser = function(userParams) {
+    return $http.post(ServerUrl + 'users.json', userParams);
+  };
+
   return {
-    findCurrentUser: findCurrentUser
+    findCurrentUser: findCurrentUser,
+    registerUser: registerUser
   };
 }]);
