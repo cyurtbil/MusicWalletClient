@@ -9,7 +9,6 @@ app.run(['$rootScope', '$window', '$http', 'authFactory', '$location', 'dataFact
   $rootScope.$on('$routeChangeStart', function(event, next) {
     dataFactory.fetchUsers().then(function(response) {
       var currentUser = userFactory.findCurrentUser(response.data.users);
-      debugger
       if(!!currentUser && !currentUser.is_authenticated && authFactory.isAuthenticated()) {
         authFactory.setHeaderAuthorization();
       } else {

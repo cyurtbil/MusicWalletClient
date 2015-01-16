@@ -1,11 +1,22 @@
 'use strict';
 
-app.controller('ConnectController', ['$scope', 'authFactory', '$http', 'ServerUrl', '$window', function($scope, authFactory, $http, ServerUrl, $window) {
+app.controller('ConnectController', ['$scope', 'authFactory', '$http', 'ServerUrl', '$window', 'dataFactory', 'userFactory', function($scope, authFactory, $http, ServerUrl, $window, dataFactory, userFactory) {
 
 
   $(document).ready(function() {
     $('body').addClass('bg');
   });
+
+
+  dataFactory.fetchUsers().then(function(response) {
+    $scope.currentUser = userFactory.findCurrentUser(response.data.users);
+    if(!!$scope.currentUser) {
+      authFactory.logout($scope.currentUser).then(function() {
+        $window.sessionStorage.removeItem('MusicWallet.user');
+      });
+    }
+  });
+
 
   authFactory.connect().then(function(response) {
     $scope.connect = response.data.url;
