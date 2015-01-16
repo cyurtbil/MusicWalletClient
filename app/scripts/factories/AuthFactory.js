@@ -6,8 +6,8 @@ app.factory('authFactory', ['$http', 'ServerUrl', '$window', '$location', functi
     return $http.get(ServerUrl + 'cloud/get_redirect_uri');
   };
 
-  var getCurrentUser = function(username) {
-    return $http.post(ServerUrl + 'users/get_current_user', {username: username});
+  var getCurrentUser = function() {
+    return $http.get(ServerUrl + 'users/get_current_user');
   };
 
   var createUserSession = function(response) {

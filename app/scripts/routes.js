@@ -6,16 +6,16 @@ app.config(['$routeProvider', function($routeProvider) {
   .when('/', {
     templateUrl: 'templates/connect.html'
   })
-  .when('/home/:username', {
+  .when('/home', {
     templateUrl: 'templates/home.html'
   })
-  .when('/search/:username', {
+  .when('/search', {
     templateUrl: 'templates/search.html'
   })
-  .when('/who/:username', {
+  .when('/who', {
     templateUrl: 'templates/who.html'
   })
-  .when('/profile/:username', {
+  .when('/profile/:id', {
     templateUrl: 'templates/profile.html'
   })
   .otherwise({

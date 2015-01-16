@@ -1,6 +1,6 @@
 'use strict';
 
-app.controller('ConnectController', ['$scope', 'authFactory', function($scope, authFactory) {
+app.controller('ConnectController', ['$scope', 'authFactory', '$http', 'ServerUrl', '$window', function($scope, authFactory, $http, ServerUrl, $window) {
 
 
   $(document).ready(function() {
@@ -13,6 +13,11 @@ app.controller('ConnectController', ['$scope', 'authFactory', function($scope, a
 
   $scope.connectToCloud = function(event) {
     event.preventDefault();
-    window.location.href = $scope.connect;
+    $http.get(ServerUrl + 'users/create_different').success(function(response) {
+      $window.sessionStorage.setItem('MusicWallet.user', response.token);
+      $http.post(ServerUrl + 'users/store_user', {info: response}).success(function() {
+        window.location.href = $scope.connect;
+      });
+    });
   };
 }]);

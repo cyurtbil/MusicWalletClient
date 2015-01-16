@@ -7,7 +7,8 @@ app.controller('HomeController', ['$scope',
                                   'walletFactory',
                                   '$sce',
                                   'userFactory',
-                                  function($scope, authFactory, $location, dataFactory, walletFactory, $sce, userFactory) {
+                                  '$rootScope',
+                                  function($scope, authFactory, $location, dataFactory, walletFactory, $sce, userFactory, $rootScope) {
 
   $(document).ready(function() {
     $('body').removeClass('bg');
