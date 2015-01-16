@@ -7,9 +7,11 @@
   </div>
 
   <form name="userRegistrationForm" ng-submit="registerUser(user)" novalidate>
-    <input type="text" name="username" placeholder="Enter Username" ng-model="user.username" required>
-    <input type="text" name="password" placeholder="Enter Password" ng-model="user.password" required>
-    <input type="text" name="password-confirmation" placeholder="Re-enter Password" ng-model="user.password_confirmation" required>
+    <h3>Join MusicWallet</h3>
+    <input type="text" name="username" placeholder="Enter Username" size="30" ng-model="user.username" required>
+    <input type="text" name="password" placeholder="Enter Password" size="30" ng-model="user.password" required>
+    <input type="text" name="password-confirmation" placeholder="Re-enter Password" size="30" ng-model="user.password_confirmation" required>
     <input type="submit" name="register" value="Register" ng-disabled="userRegistrationForm.$invalid">
+    <a href="#/login" title="Login Page">Member?</a>
   </form>
 </div>
