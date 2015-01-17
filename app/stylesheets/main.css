@@ -129,8 +129,8 @@ a:hover {
   text-align: center;
 }
 /* line 57, ../sass/partials/_base.sass */
-#register form input[name="register"],
-#login form input[name="register"] {
+#register form input[name="auth"],
+#login form input[name="auth"] {
   position: relative;
   top: 10px;
   width: 245px;
@@ -140,71 +140,55 @@ a:hover {
   color: white;
 }
 /* line 65, ../sass/partials/_base.sass */
-#register form input[name="register"]:hover,
-#login form input[name="register"]:hover {
+#register form input[name="auth"]:hover,
+#login form input[name="auth"]:hover {
   background-color: rgba(138, 18, 27, 0.92);
   cursor: pointer;
 }
 
-/* line 69, ../sass/partials/_base.sass */
-input[name="login"] {
-  position: relative;
-  top: 10px;
-  width: 245px;
-  height: 32px;
-  border: 0px;
-  background-color: rgba(68, 39, 32, 0.92);
-  color: white;
-}
-/* line 77, ../sass/partials/_base.sass */
-input[name="login"]:hover {
-  background-color: rgba(138, 18, 27, 0.92);
-  cursor: pointer;
-}
-
-/* line 93, ../sass/partials/_base.sass */
+/* line 82, ../sass/partials/_base.sass */
 #navbar-wrapper, #navbar-wrapper #navbar {
   height: 55px;
   width: 100%;
 }
-/* line 96, ../sass/partials/_base.sass */
+/* line 85, ../sass/partials/_base.sass */
 #navbar-wrapper #navbar {
   background-color: rgba(11, 5, 1, 0.9);
 }
-/* line 99, ../sass/partials/_base.sass */
+/* line 88, ../sass/partials/_base.sass */
 #navbar-wrapper #navbar li {
   display: inline-block;
   -webkit-transition: box-shadow 0.5s ease;
   -moz-transition: box-shadow 0.5s ease;
   transition: box-shadow 0.5s ease;
 }
-/* line 102, ../sass/partials/_base.sass */
+/* line 91, ../sass/partials/_base.sass */
 #navbar-wrapper #navbar li:hover {
   box-shadow: inset 0px -2px 31px 17px rgba(138, 18, 27, 0.92);
   cursor: pointer;
 }
-/* line 105, ../sass/partials/_base.sass */
+/* line 94, ../sass/partials/_base.sass */
 #navbar-wrapper #navbar li a {
   color: rgba(253, 254, 252, 0.91);
 }
-/* line 107, ../sass/partials/_base.sass */
+/* line 96, ../sass/partials/_base.sass */
 #navbar-wrapper #navbar ul#left-nav {
   float: left;
   width: 60%;
 }
-/* line 110, ../sass/partials/_base.sass */
+/* line 99, ../sass/partials/_base.sass */
 #navbar-wrapper #navbar ul#left-nav li {
   float: left;
   margin-left: 10%;
   padding: 19.5px 3%;
   font-size: 1.03em;
 }
-/* line 115, ../sass/partials/_base.sass */
+/* line 104, ../sass/partials/_base.sass */
 #navbar-wrapper #navbar ul#right-nav {
   float: right;
   width: 40%;
 }
-/* line 118, ../sass/partials/_base.sass */
+/* line 107, ../sass/partials/_base.sass */
 #navbar-wrapper #navbar ul#right-nav li {
   float: right;
   margin-right: 13%;
@@ -212,7 +196,7 @@ input[name="login"]:hover {
   font-size: 1.03em;
 }
 
-/* line 124, ../sass/partials/_base.sass */
+/* line 113, ../sass/partials/_base.sass */
 span.wallet-name {
   position: relative;
   display: inline-block;
@@ -221,21 +205,21 @@ span.wallet-name {
   padding: 5px 26px;
   border-radius: 3px;
 }
-/* line 131, ../sass/partials/_base.sass */
+/* line 120, ../sass/partials/_base.sass */
 span.wallet-name:hover {
   background-color: rgba(138, 18, 27, 0.92);
 }
-/* line 133, ../sass/partials/_base.sass */
+/* line 122, ../sass/partials/_base.sass */
 span.wallet-name a {
   font-size: 1.03em;
   color: rgba(255, 255, 255, 0.93);
 }
 
-/* line 138, ../sass/partials/_base.sass */
+/* line 127, ../sass/partials/_base.sass */
 #profile-wrapper {
   color: white;
 }
-/* line 140, ../sass/partials/_base.sass */
+/* line 129, ../sass/partials/_base.sass */
 #profile-wrapper #left-side {
   position: fixed;
   float: left;
@@ -245,12 +229,12 @@ span.wallet-name a {
   box-shadow: 0px 0px 26px 0px rgba(0, 0, 0, 0.66);
   background-color: #4b2221;
 }
-/* line 148, ../sass/partials/_base.sass */
+/* line 137, ../sass/partials/_base.sass */
 #profile-wrapper #left-side #user-info-wrapper {
   position: relative;
   height: 206px;
 }
-/* line 151, ../sass/partials/_base.sass */
+/* line 140, ../sass/partials/_base.sass */
 #profile-wrapper #left-side #user-info-wrapper #sidebar-left {
   float: left;
   width: 50%;
@@ -258,54 +242,54 @@ span.wallet-name a {
   top: 29px;
   left: 8%;
 }
-/* line 157, ../sass/partials/_base.sass */
+/* line 146, ../sass/partials/_base.sass */
 #profile-wrapper #left-side #user-info-wrapper #sidebar-left img {
   height: 150px;
   width: 150px;
   border-radius: 2px;
   box-shadow: 0px 0px 13px 0px rgba(255, 255, 255, 0.11);
 }
-/* line 162, ../sass/partials/_base.sass */
+/* line 151, ../sass/partials/_base.sass */
 #profile-wrapper #left-side #user-info-wrapper #sidebar-right {
   float: right;
   width: 50%;
   position: relative;
   top: 50px;
 }
-/* line 167, ../sass/partials/_base.sass */
+/* line 156, ../sass/partials/_base.sass */
 #profile-wrapper #left-side #user-info-wrapper #sidebar-right div {
   margin: 19px 16%;
 }
-/* line 169, ../sass/partials/_base.sass */
+/* line 158, ../sass/partials/_base.sass */
 #profile-wrapper #left-side #user-info-wrapper #sidebar-right div:nth-child(1) {
   font-size: 1.5em;
 }
-/* line 171, ../sass/partials/_base.sass */
+/* line 160, ../sass/partials/_base.sass */
 #profile-wrapper #left-side #user-wallets-wrapper {
   margin: 0px;
 }
-/* line 174, ../sass/partials/_base.sass */
+/* line 163, ../sass/partials/_base.sass */
 #profile-wrapper #left-side #user-wallets-wrapper h4 {
   font-size: 1.3em;
   text-align: center;
 }
-/* line 177, ../sass/partials/_base.sass */
+/* line 166, ../sass/partials/_base.sass */
 #profile-wrapper #left-side #user-wallets-wrapper ul {
   text-align: center;
   overflow-y: scroll;
   height: 200px;
   box-shadow: 0px 0px 1px 0px white;
 }
-/* line 182, ../sass/partials/_base.sass */
+/* line 171, ../sass/partials/_base.sass */
 #profile-wrapper #left-side #user-wallets-wrapper ul li {
   padding: 10px 0%;
 }
-/* line 184, ../sass/partials/_base.sass */
+/* line 173, ../sass/partials/_base.sass */
 #profile-wrapper #left-side #user-wallets-wrapper ul li:hover {
   cursor: pointer;
   background-color: #7C2F2D;
 }
-/* line 187, ../sass/partials/_base.sass */
+/* line 176, ../sass/partials/_base.sass */
 #profile-wrapper #right-side {
   position: relative;
   float: right;
