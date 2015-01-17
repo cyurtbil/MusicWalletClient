@@ -18,7 +18,8 @@ app.controller('HomeController', ['$scope',
     $scope.uniqueWalletNames = walletFactory.createUniqueWalletNamesArray(response.data.wallets);
   });
 
-  $scope.viewSongsOfAll = function(walletName) {
+  $scope.viewSongsOfAll = function(walletName, event) {
+    event.preventDefault();
     var clickedWallet = $scope.wallets.filter(function(wallet) {return wallet.name === walletName;});
     $scope.walletSongs = [];
     clickedWallet.forEach(function(wallet) {
