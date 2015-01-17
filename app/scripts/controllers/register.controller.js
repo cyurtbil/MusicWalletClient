@@ -7,7 +7,6 @@ app.controller('RegisterController', ['$scope',
                                       '$location',
                                       function($scope, authFactory, dataFactory, userFactory, $location) {
 
-
   $(document).ready(function() {
     $('body').addClass('bg');
   });

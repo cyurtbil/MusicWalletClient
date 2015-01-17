@@ -23,11 +23,16 @@ app.factory('authFactory', ['$http', 'ServerUrl', '$window', '$location', functi
     $http.defaults.headers.common['Authorization'] = 'Token token=' + $window.sessionStorage.getItem('MusicWallet.user');
   };
 
+  var login = function(user) {
+    return $http.post(ServerUrl + 'login', user);
+  };
+
   return {
     connect: connect,
     createUserSession: createUserSession,
     logout: logout,
     isAuthenticated: isAuthenticated,
-    setHeaderAuthorization: setHeaderAuthorization
+    setHeaderAuthorization: setHeaderAuthorization,
+    login: login
   };
 }]);
