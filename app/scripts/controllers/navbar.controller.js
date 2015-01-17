@@ -15,7 +15,6 @@ app.controller('NavbarController', ['$scope',
   $scope.logout = function(user) {
     authFactory.logout().then(function() {
       $window.sessionStorage.removeItem('MusicWallet.user');
-      $location.path('/register');
     });
   };
 }]);

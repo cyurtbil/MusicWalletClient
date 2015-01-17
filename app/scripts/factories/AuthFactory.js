@@ -2,10 +2,6 @@
 
 app.factory('authFactory', ['$http', 'ServerUrl', '$window', '$location', function($http, ServerUrl, $window, $location) {
 
-  var connect = function() {
-    return $http.get(ServerUrl + 'cloud/get_redirect_uri');
-  };
-
   var createUserSession = function(response) {
     $window.sessionStorage.setItem('MusicWallet.user', response.token);
     setHeaderAuthorization();
@@ -28,7 +24,6 @@ app.factory('authFactory', ['$http', 'ServerUrl', '$window', '$location', functi
   };
 
   return {
-    connect: connect,
     createUserSession: createUserSession,
     logout: logout,
     isAuthenticated: isAuthenticated,

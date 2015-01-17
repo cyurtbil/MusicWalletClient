@@ -9,6 +9,7 @@ app.run(['$rootScope', 'authFactory', '$location', function($rootScope, authFact
   $rootScope.$on('$routeChangeStart', function(event, next) {
       if(authFactory.isAuthenticated()) {
         authFactory.setHeaderAuthorization();
+        $('body').removeClass('bg');
       } else if($location.path() === '/register') {
         $location.path('/register');
       } else {

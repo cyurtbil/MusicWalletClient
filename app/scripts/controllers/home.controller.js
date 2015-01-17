@@ -9,10 +9,6 @@ app.controller('HomeController', ['$scope',
                                   'userFactory',
                                   function($scope, authFactory, $location, dataFactory, walletFactory, $sce, userFactory) {
 
-  $(document).ready(function() {
-    $('body').removeClass('bg');
-  });
-
   dataFactory.fetchUsers().then(function(response) {
     $scope.currentUser = userFactory.findCurrentUser(response.data.users);
   });

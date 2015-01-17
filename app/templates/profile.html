@@ -9,8 +9,6 @@
         </div>
         <div id="sidebar-right">
           <div>{{currentUser.username}}</div>
-          <div><strong>Followings: </strong>{{currentUser.followings_count}}</div>
-          <div><strong>Followers: </strong>{{currentUser.followers_count}}</div>
         </div>
       </div>
       <div id="user-wallets-wrapper">
@@ -25,7 +23,7 @@
     <div id="right-side">
       <h1 style="color: black;">{{wallet.name}}</h1>
       <div ng-repeat="song in walletSongs">
-        <iframe width="100%" height="200" style="margin: 10px 0%;" scrolling="no" frameborder="no" src="{{fixUrl(song.name)}}"></iframe>
+        <iframe width="100%" height="200" style="margin: 10px 0%;" scrolling="no" frameborder="no" src="{{fixUrl(song.url)}}"></iframe>
       </div>
     </div>
   </div>
