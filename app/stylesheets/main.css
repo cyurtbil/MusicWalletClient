@@ -299,19 +299,19 @@ span.wallet-name a {
 }
 
 /* line 172, ../sass/partials/_base.sass */
-form {
+form[name="searchSongForm"] {
   position: relative;
-  top: 282px;
-  left: 15%;
+  top: 254px;
+  margin-left: 15%;
 }
 /* line 176, ../sass/partials/_base.sass */
-form input[name="search-bar"] {
+form[name="searchSongForm"] input[name="search-bar"] {
   border: 1px solid rgba(0, 0, 0, 0.22);
   border-radius: 1.5px;
   height: 39px;
 }
 /* line 180, ../sass/partials/_base.sass */
-form input[name="search"] {
+form[name="searchSongForm"] input[name="search"] {
   background-color: black;
   color: white;
   border: 0px;
@@ -319,7 +319,7 @@ form input[name="search"] {
   padding: 11px 33px;
 }
 /* line 186, ../sass/partials/_base.sass */
-form input[name="search"]:hover {
+form[name="searchSongForm"] input[name="search"]:hover {
   cursor: pointer;
   background-color: rgba(138, 18, 27, 0.92);
 }
