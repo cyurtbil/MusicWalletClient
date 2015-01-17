@@ -302,7 +302,7 @@ span.wallet-name a {
 form {
   position: relative;
   top: 282px;
-  left: 20%;
+  left: 15%;
 }
 /* line 176, ../sass/partials/_base.sass */
 form input[name="search-bar"] {

@@ -12,9 +12,11 @@ app.controller('SearchController', ['$scope',
   });
 
   $scope.searchSongs = function(params) {
+    $('form[name="searchSongForm"]').stop(true, true).animate({top: "10px"}, 1000);
     dataFactory.fetchTracksFromCloud(params).then(function(response) {
-      $scope.trackSources = response.data.urls;
+      window.setTimeout($scope.trackSources = response.data.urls, 8000)
     });
+    
   };
 
   $scope.fixUrl = function(source) {
@@ -23,7 +25,6 @@ app.controller('SearchController', ['$scope',
 
   $scope.addToWallet = function(wallet, source) {
     songFactory.addSong(wallet, source).then(function(response) {
-      debugger
       var removedElementIndex = $scope.trackSources.indexOf(response.data.url);
       $scope.trackSources.splice(removedElementIndex, 1);
     });
