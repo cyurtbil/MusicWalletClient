@@ -3,7 +3,7 @@
 <div ng-controller="SearchController">
 
   <form name="searchSongForm" ng-submit="searchSongs(params)">
-    <input type="text" name="search-bar" placeholder="Search Songs by Name" ng-model="params.input">
+    <input type="text" name="search-bar" size="70" placeholder="Search Songs by Name" ng-model="params.input">
     <input type="submit" name="search" value="Search">
   </form>
   <div ng-repeat="source in trackSources">

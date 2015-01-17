@@ -72,7 +72,7 @@ a
   width: 100%
   #navbar
     @extend #navbar-wrapper
-    background-color: rgba(11, 5, 1, 0.9)
+    background-color: rgba(11, 5, 1, 0.83)
     li
       display: inline-block
       +transition(box-shadow, 0.5s, ease)
@@ -121,7 +121,7 @@ span.wallet-name
     width: 30%
     height: 100%
     box-shadow: 0px 0px 26px 0px rgba(0, 0, 0, 0.66)
-    background-color: rgba(75, 34, 33, 1)
+    background-color: rgba(75, 34, 33, 0.93)
     #user-info-wrapper
       position: relative
       height: 206px
@@ -154,7 +154,7 @@ span.wallet-name
       ul
         text-align: center
         overflow-y: scroll
-        // height: 200px
+        height: 250px
         box-shadow: 0px 0px 1px 0px white
         li
           padding: 10px 0%
@@ -168,6 +168,25 @@ span.wallet-name
     clear: left
     height: 900px
 
+// Search Page
+form
+  position: relative
+  top: 282px
+  left: 20%
+  input[name="search-bar"]
+    border: 1px solid rgba(0, 0, 0, 0.22)
+    border-radius: 1.5px
+    height: 39px
+  input[name="search"]
+    background-color: black
+    color: white
+    border: 0px
+    border-radius: 2px
+    padding: 11px 33px
+    &:hover
+      cursor: pointer
+      background-color: rgba(138, 18, 27, 0.92)
+  
 
 // a
 //   &[title="Connect"]
@@ -180,3 +199,4 @@ span.wallet-name
 //     font-size: 1.4em
 //     &:hover
 //       background-color: rgba(138, 18, 27, 0.92)
+
