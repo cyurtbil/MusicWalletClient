@@ -14,7 +14,6 @@ app.controller('SearchController', ['$scope',
   $scope.searchSongs = function(params) {
     $('form[name="searchSongForm"]').stop(true, true).animate({top: "10px"}, 1000);
     dataFactory.fetchTracksFromCloud(params).then(function(response) {
-      // window.setTimeout($scope.trackSources = response.data.urls, 2)
       $scope.trackSources = response.data.urls
     });
     

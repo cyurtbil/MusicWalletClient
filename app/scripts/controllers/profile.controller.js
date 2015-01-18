@@ -12,6 +12,7 @@ app.controller('ProfileController', ['$scope',
   });
 
   $scope.viewSongs = function(wallet) {
+    $('h1').show(500);
     walletFactory.getWallet(wallet).then(function(response) {
       $scope.wallet = response.data;
       $scope.walletSongs = response.data.songs;
