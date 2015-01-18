@@ -308,19 +308,24 @@ span.wallet-name a {
   padding: 10px 0%;
 }
 
-/* line 179, ../sass/partials/_base.sass */
+/* line 177, ../sass/partials/_base.sass */
+.walletactive {
+  background-color: #7C2F2D;
+}
+
+/* line 181, ../sass/partials/_base.sass */
 form[name="searchSongForm"] {
   position: relative;
   top: 254px;
   margin-left: 15%;
 }
-/* line 183, ../sass/partials/_base.sass */
+/* line 185, ../sass/partials/_base.sass */
 form[name="searchSongForm"] input[name="search-bar"] {
   border: 1px solid rgba(0, 0, 0, 0.22);
   border-radius: 1.5px;
   height: 39px;
 }
-/* line 187, ../sass/partials/_base.sass */
+/* line 189, ../sass/partials/_base.sass */
 form[name="searchSongForm"] input[name="search"] {
   background-color: black;
   color: white;
@@ -328,13 +333,13 @@ form[name="searchSongForm"] input[name="search"] {
   border-radius: 2px;
   padding: 11px 33px;
 }
-/* line 193, ../sass/partials/_base.sass */
+/* line 195, ../sass/partials/_base.sass */
 form[name="searchSongForm"] input[name="search"]:hover {
   cursor: pointer;
   background-color: rgba(138, 18, 27, 0.92);
 }
 
-/* line 197, ../sass/partials/_base.sass */
+/* line 199, ../sass/partials/_base.sass */
 iframe {
   margin: 20px 0%;
   box-shadow: 0px 0px 4px 0px #494747;
