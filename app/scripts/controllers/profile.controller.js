@@ -9,15 +9,11 @@ app.controller('ProfileController', ['$scope',
 
   dataFactory.fetchUsers().then(function(response) {
     $scope.currentUser = userFactory.findCurrentUser(response.data.users);
-    $scope.currentUser.wallets.forEach(function(wallet) {
-      wallet.active = false;
-    });
+    resetWalletActivation($scope.currentUser.wallets);
   });
 
   $scope.viewSongs = function(wallet, wallets) {
-    wallets.forEach(function(element) {
-      element.active = false;
-    });
+    resetWalletActivation(wallets)
     wallet.active = true;
     walletFactory.getWallet(wallet).then(function(response) {
       $scope.walletSongs = response.data.songs;
@@ -26,5 +22,11 @@ app.controller('ProfileController', ['$scope',
 
   $scope.fixUrl = function(source) {
     return $sce.trustAsResourceUrl(source);
+  };
+
+  var resetWalletActivation = function(wallets) {
+    wallets.forEach(function(wallet) {
+      wallet.active = false;
+    });
   };
 }]);
