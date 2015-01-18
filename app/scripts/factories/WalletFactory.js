@@ -4,9 +4,9 @@ app.factory('walletFactory', ['$http', 'ServerUrl', function($http, ServerUrl) {
 
   var createUniqueWalletNamesArray = function(wallets) {
     var walletNames = [];
-    for(var i = 0; i < wallets.length; i++) {
-      walletNames.push(wallets[i].name);
-    };
+    wallets.forEach(function(wallet) {
+      walletNames.push(wallet.name);
+    });
     return walletNames.filter(function(walletName, index, self) {return self.indexOf(walletName) === index;});
   };
 
@@ -14,8 +14,28 @@ app.factory('walletFactory', ['$http', 'ServerUrl', function($http, ServerUrl) {
     return $http.get(ServerUrl + 'wallets/' + wallet.id + '.json');
   };
 
+  var extractSongsFromClickedWallet = function(wallets, currentUser, walletName) {
+    var walletSongs = [];
+    var clickedWallet = defineClickedWallet(wallets, walletName);
+    clickedWallet.forEach(function(wallet) {
+      if(wallet.user_id !== currentUser.id) {
+        wallet.songs.forEach(function(song) {
+          walletSongs.push(song);
+        });
+      }
+    });
+    return walletSongs;
+  };
+
+  var defineClickedWallet = function(wallets, walletName) {
+    return wallets.filter(function(wallet) {
+      return wallet.name === walletName;
+    });
+  };
+
   return {
     createUniqueWalletNamesArray: createUniqueWalletNamesArray,
-    getWallet: getWallet
+    getWallet: getWallet,
+    extractSongsFromClickedWallet: extractSongsFromClickedWallet
   };
 }]);

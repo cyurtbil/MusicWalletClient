@@ -20,15 +20,7 @@ app.controller('HomeController', ['$scope',
 
   $scope.viewSongsOfAll = function(walletName, event) {
     event.preventDefault();
-    var clickedWallet = $scope.wallets.filter(function(wallet) {return wallet.name === walletName;});
-    $scope.walletSongs = [];
-    clickedWallet.forEach(function(wallet) {
-      if(wallet.user_id !== $scope.currentUser.id) {
-        wallet.songs.forEach(function(song) {
-          $scope.walletSongs.push(song);
-        });
-      }
-    });
+    $scope.walletSongs = walletFactory.extractSongsFromClickedWallet($scope.wallets, $scope.currentUser, walletName);
   };
 
   $scope.fixUrl = function(source) {
