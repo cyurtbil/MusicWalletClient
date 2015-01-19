@@ -273,19 +273,38 @@ span.wallet-name a {
   background-color: #7C2F2D;
 }
 
-/* line 156, ../sass/partials/_base.sass */
+/* line 155, ../sass/partials/_base.sass */
+.song-wrapper {
+  margin-bottom: 14px;
+}
+/* line 157, ../sass/partials/_base.sass */
+.song-wrapper .remove-song {
+  background-color: black;
+  color: white;
+  border: 0px;
+  border-radius: 2px;
+  padding: 11px 33px;
+  width: 100%;
+}
+/* line 164, ../sass/partials/_base.sass */
+.song-wrapper .remove-song:hover {
+  cursor: pointer;
+  background-color: rgba(138, 18, 27, 0.92);
+}
+
+/* line 170, ../sass/partials/_base.sass */
 form[name="searchSongForm"] {
   position: relative;
   top: 254px;
   margin-left: 15%;
 }
-/* line 160, ../sass/partials/_base.sass */
+/* line 174, ../sass/partials/_base.sass */
 form[name="searchSongForm"] input[name="search-bar"] {
   border: 1px solid rgba(0, 0, 0, 0.22);
   border-radius: 1.5px;
   height: 39px;
 }
-/* line 164, ../sass/partials/_base.sass */
+/* line 178, ../sass/partials/_base.sass */
 form[name="searchSongForm"] input[name="search"] {
   background-color: black;
   color: white;
@@ -293,15 +312,14 @@ form[name="searchSongForm"] input[name="search"] {
   border-radius: 2px;
   padding: 11px 33px;
 }
-/* line 170, ../sass/partials/_base.sass */
+/* line 184, ../sass/partials/_base.sass */
 form[name="searchSongForm"] input[name="search"]:hover {
   cursor: pointer;
   background-color: rgba(138, 18, 27, 0.92);
 }
 
-/* line 174, ../sass/partials/_base.sass */
+/* line 188, ../sass/partials/_base.sass */
 iframe {
-  margin: 20px 0%;
   box-shadow: 0px 0px 4px 0px #494747;
   height: 235px;
   width: 100%;

@@ -13,9 +13,9 @@
       </div>
     </div>
     <div id="right-side">
-      <div ng-repeat="song in walletSongs">
+      <div ng-repeat="song in walletSongs" class="song-wrapper">
         <iframe scrolling="no" frameborder="no" src="{{fixUrl(song.url)}}"></iframe>
-        <button type="submit" ng-click="removeFromWallet(song)" style="color: black;">Remove</button>
+        <button type="submit" ng-click="removeFromWallet(song)" class="remove-song">Remove</button>
       </div>
     </div>
   </div>
