@@ -26,4 +26,16 @@ app.controller('HomeController', ['$scope',
   $scope.fixUrl = function(source) {
     return $sce.trustAsResourceUrl(source);
   };
+
+  $scope.hoverIn = function(walletName, event) {
+    switch(walletName) {
+      case "Dark":
+        $(event.delegateTarget).css("background-color", "black");
+        break;
+    }
+  };
+
+  $scope.hoverOut = function(event) {
+    $(event.delegateTarget).css("background-color", "#8e1e1e");
+  };
 }]);

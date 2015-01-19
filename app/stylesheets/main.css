@@ -196,7 +196,7 @@ a:hover {
   font-size: 1.03em;
 }
 
-/* line 101, ../sass/partials/_base.sass */
+/* line 102, ../sass/partials/_base.sass */
 span.wallet-name {
   position: relative;
   display: inline-block;
@@ -205,21 +205,17 @@ span.wallet-name {
   padding: 5px 26px;
   border-radius: 3px;
 }
-/* line 108, ../sass/partials/_base.sass */
-span.wallet-name:hover {
-  background-color: rgba(138, 18, 27, 0.92);
-}
-/* line 110, ../sass/partials/_base.sass */
+/* line 109, ../sass/partials/_base.sass */
 span.wallet-name a {
   font-size: 1.03em;
   color: rgba(255, 255, 255, 0.93);
 }
 
-/* line 115, ../sass/partials/_base.sass */
+/* line 114, ../sass/partials/_base.sass */
 #profile-wrapper {
   color: white;
 }
-/* line 117, ../sass/partials/_base.sass */
+/* line 116, ../sass/partials/_base.sass */
 #profile-wrapper #left-side {
   position: fixed;
   float: left;
@@ -229,12 +225,12 @@ span.wallet-name a {
   box-shadow: 0px 0px 26px 0px rgba(0, 0, 0, 0.66);
   background-color: rgba(75, 34, 33, 0.93);
 }
-/* line 125, ../sass/partials/_base.sass */
+/* line 124, ../sass/partials/_base.sass */
 #profile-wrapper #left-side #user-info-wrapper {
   position: relative;
   height: 206px;
 }
-/* line 128, ../sass/partials/_base.sass */
+/* line 127, ../sass/partials/_base.sass */
 #profile-wrapper #left-side #user-info-wrapper #sidebar-left {
   float: left;
   width: 50%;
@@ -242,54 +238,54 @@ span.wallet-name a {
   top: 29px;
   left: 8%;
 }
-/* line 134, ../sass/partials/_base.sass */
+/* line 133, ../sass/partials/_base.sass */
 #profile-wrapper #left-side #user-info-wrapper #sidebar-left img {
   height: 150px;
   width: 150px;
   border-radius: 2px;
   box-shadow: 0px 0px 13px 0px rgba(255, 255, 255, 0.11);
 }
-/* line 139, ../sass/partials/_base.sass */
+/* line 138, ../sass/partials/_base.sass */
 #profile-wrapper #left-side #user-info-wrapper #sidebar-right {
   float: right;
   width: 50%;
   position: relative;
   top: 50px;
 }
-/* line 144, ../sass/partials/_base.sass */
+/* line 143, ../sass/partials/_base.sass */
 #profile-wrapper #left-side #user-info-wrapper #sidebar-right div {
   margin: 19px 16%;
 }
-/* line 146, ../sass/partials/_base.sass */
+/* line 145, ../sass/partials/_base.sass */
 #profile-wrapper #left-side #user-info-wrapper #sidebar-right div:nth-child(1) {
   font-size: 1.5em;
 }
-/* line 148, ../sass/partials/_base.sass */
+/* line 147, ../sass/partials/_base.sass */
 #profile-wrapper #left-side #user-wallets-wrapper {
   margin: 0px;
 }
-/* line 151, ../sass/partials/_base.sass */
+/* line 150, ../sass/partials/_base.sass */
 #profile-wrapper #left-side #user-wallets-wrapper h4 {
   font-size: 1.3em;
   text-align: center;
 }
-/* line 154, ../sass/partials/_base.sass */
+/* line 153, ../sass/partials/_base.sass */
 #profile-wrapper #left-side #user-wallets-wrapper ul {
   text-align: center;
   overflow-y: scroll;
   height: 250px;
   box-shadow: 0px 0px 1px 0px white;
 }
-/* line 159, ../sass/partials/_base.sass */
+/* line 158, ../sass/partials/_base.sass */
 #profile-wrapper #left-side #user-wallets-wrapper ul li {
   padding: 10px 0%;
 }
-/* line 161, ../sass/partials/_base.sass */
+/* line 160, ../sass/partials/_base.sass */
 #profile-wrapper #left-side #user-wallets-wrapper ul li:hover {
   cursor: pointer;
   background-color: #7C2F2D;
 }
-/* line 164, ../sass/partials/_base.sass */
+/* line 163, ../sass/partials/_base.sass */
 #profile-wrapper #right-side {
   position: relative;
   float: right;
@@ -297,7 +293,7 @@ span.wallet-name a {
   clear: left;
   height: 900px;
 }
-/* line 170, ../sass/partials/_base.sass */
+/* line 169, ../sass/partials/_base.sass */
 #profile-wrapper #right-side h1, #profile-wrapper #right-side #register .header-wrapper h2, #register .header-wrapper #profile-wrapper #right-side h2,
 #profile-wrapper #right-side #login .header-wrapper h2,
 #login .header-wrapper #profile-wrapper #right-side h2 {
@@ -308,24 +304,24 @@ span.wallet-name a {
   padding: 10px 0%;
 }
 
-/* line 177, ../sass/partials/_base.sass */
+/* line 176, ../sass/partials/_base.sass */
 .walletactive {
   background-color: #7C2F2D;
 }
 
-/* line 181, ../sass/partials/_base.sass */
+/* line 180, ../sass/partials/_base.sass */
 form[name="searchSongForm"] {
   position: relative;
   top: 254px;
   margin-left: 15%;
 }
-/* line 185, ../sass/partials/_base.sass */
+/* line 184, ../sass/partials/_base.sass */
 form[name="searchSongForm"] input[name="search-bar"] {
   border: 1px solid rgba(0, 0, 0, 0.22);
   border-radius: 1.5px;
   height: 39px;
 }
-/* line 189, ../sass/partials/_base.sass */
+/* line 188, ../sass/partials/_base.sass */
 form[name="searchSongForm"] input[name="search"] {
   background-color: black;
   color: white;
@@ -333,13 +329,13 @@ form[name="searchSongForm"] input[name="search"] {
   border-radius: 2px;
   padding: 11px 33px;
 }
-/* line 195, ../sass/partials/_base.sass */
+/* line 194, ../sass/partials/_base.sass */
 form[name="searchSongForm"] input[name="search"]:hover {
   cursor: pointer;
   background-color: rgba(138, 18, 27, 0.92);
 }
 
-/* line 199, ../sass/partials/_base.sass */
+/* line 198, ../sass/partials/_base.sass */
 iframe {
   margin: 20px 0%;
   box-shadow: 0px 0px 4px 0px #494747;
