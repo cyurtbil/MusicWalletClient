@@ -26,7 +26,6 @@ app.controller('ProfileController', ['$scope',
   };
 
   $scope.removeFromWallet = function(song) {
-    debugger
     songFactory.removeSong(song).then(function() {
       var removedElementIndex = $scope.walletSongs.indexOf(song);
       $scope.walletSongs.splice(removedElementIndex, 1);
