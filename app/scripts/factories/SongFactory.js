@@ -10,7 +10,12 @@ app.factory('songFactory', ['$http', 'ServerUrl', function($http, ServerUrl) {
     return $http.post(ServerUrl + 'songs.json', params);
   };
 
+  var removeSong = function(song) {
+    return $http.delete(ServerUrl + 'songs/' + song.id + '.json');
+  };
+
   return {
-    addSong: addSong
+    addSong: addSong,
+    removeSong: removeSong
   };
 }]);

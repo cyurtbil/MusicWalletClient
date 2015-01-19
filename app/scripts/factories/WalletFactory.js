@@ -75,10 +75,17 @@ app.factory('walletFactory', ['$http', 'ServerUrl', function($http, ServerUrl) {
     }
   };
 
+  var resetWalletActivation = function(wallets) {
+    wallets.forEach(function(wallet) {
+      wallet.active = false;
+    });
+  };
+
   return {
     createUniqueWalletNamesArray: createUniqueWalletNamesArray,
     getWallet: getWallet,
     extractSongsFromClickedWallet: extractSongsFromClickedWallet,
-    defineColor: defineColor
+    defineColor: defineColor,
+    resetWalletActivation: resetWalletActivation
   };
 }]);

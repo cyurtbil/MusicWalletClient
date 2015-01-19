@@ -25,8 +25,8 @@ app.controller('SearchController', ['$scope',
 
   $scope.addToWallet = function(wallet, source) {
     songFactory.addSong(wallet, source).then(function(response) {
-      var removedElementIndex = $scope.trackSources.indexOf(response.data.url);
-      $scope.trackSources.splice(removedElementIndex, 1);
+      var addedElementIndex = $scope.trackSources.indexOf(response.data.url);
+      $scope.trackSources.splice(addedElementIndex, 1);
     });
   };
 
