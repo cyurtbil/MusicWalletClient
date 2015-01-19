@@ -1,7 +1,7 @@
 <ng-include src="'templates/navbar.html'"></ng-include>
 
 <div ng-controller="HomeController">
-  <span ng-repeat="walletName in uniqueWalletNames track by $index" class="wallet-name" ng-mouseenter="hoverIn(walletName, $event)" ng-mouseleave="hoverOut($event)"><a href="#/" title="{{walletName}}" ng-click="viewSongsOfAll(walletName, $event)">{{walletName}}</a></span>
+  <span ng-repeat="walletName in uniqueWalletNames track by $index" class="wallet-name" ng-mouseenter="hoverIn(walletName, $event)" ng-mouseleave="hoverOut($event)"><a href="#/" title="{{walletName}}" ng-click="viewSongsOfAll(walletName, $event, wallets)">{{walletName}}</a></span>
   <hr>
   <div ng-repeat="song in walletSongs">
     <iframe scrolling="no" frameborder="no" src="{{fixUrl(song.url)}}"></iframe>

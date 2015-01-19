@@ -18,9 +18,9 @@ app.controller('HomeController', ['$scope',
     $scope.uniqueWalletNames = walletFactory.createUniqueWalletNamesArray(response.data.wallets);
   });
 
-  $scope.viewSongsOfAll = function(walletName, event) {
+  $scope.viewSongsOfAll = function(walletName, event, wallets) {
     event.preventDefault();
-    $scope.walletSongs = walletFactory.extractSongsFromClickedWallet($scope.wallets, $scope.currentUser, walletName);
+    $scope.walletSongs = walletFactory.extractSongsFromClickedWallet(wallets, $scope.currentUser, walletName);
   };
 
   $scope.fixUrl = function(source) {
@@ -28,14 +28,11 @@ app.controller('HomeController', ['$scope',
   };
 
   $scope.hoverIn = function(walletName, event) {
-    switch(walletName) {
-      case "Dark":
-        $(event.delegateTarget).css("background-color", "black");
-        break;
-    }
+    walletFactory.defineColor(walletName, event);
   };
 
   $scope.hoverOut = function(event) {
     $(event.delegateTarget).css("background-color", "#8e1e1e");
+    $(event.delegateTarget).children().css("color", "white");
   };
 }]);

@@ -33,9 +33,52 @@ app.factory('walletFactory', ['$http', 'ServerUrl', function($http, ServerUrl) {
     });
   };
 
+  var defineColor = function(walletName, event) {
+    switch(walletName) {
+      case "Dark":
+        $(event.delegateTarget).css("background-color", "black");
+        break;
+      case "Chill":
+        $(event.delegateTarget).css("background-color", "rgb(95, 147, 225)");
+        break;
+      case "Happy":
+        $(event.delegateTarget).css("background-color", "rgb(239, 164, 86)");
+        break;
+      case "Party":
+        $(event.delegateTarget).css("background-color", "rgb(177, 177, 13)");
+        break;
+      case "Dance":
+        $(event.delegateTarget).css("background-color", "rgb(30, 142, 141)");
+        break;
+      case "Sport":
+        $(event.delegateTarget).css("background-color", "rgb(11, 44, 114)");
+        break;
+      case "Mixed Moods":
+        $(event.delegateTarget).css({"background-color": "white", "border": "black"});
+        $(event.delegateTarget).children().css("color", "black");
+        break;
+      case "Sad":
+        $(event.delegateTarget).css("background-color", "grey");
+        break;
+      case "Angry":
+        $(event.delegateTarget).css("background-color", "rgb(106, 5, 5)");
+        break;
+      case "Dreamy":
+        $(event.delegateTarget).css("background-color", "purple");
+        break;
+      case "Illegal":
+        $(event.delegateTarget).css("background-color", "rgb(101, 79, 6)");
+        break;
+      case "Pumped":
+        $(event.delegateTarget).css("background-color", "rgb(190, 24, 24)");
+        break;
+    }
+  };
+
   return {
     createUniqueWalletNamesArray: createUniqueWalletNamesArray,
     getWallet: getWallet,
-    extractSongsFromClickedWallet: extractSongsFromClickedWallet
+    extractSongsFromClickedWallet: extractSongsFromClickedWallet,
+    defineColor: defineColor
   };
 }]);
