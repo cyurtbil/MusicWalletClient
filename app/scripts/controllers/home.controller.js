@@ -38,11 +38,11 @@ app.controller('HomeController', ['$scope',
   };
 
   $scope.addToWallet = function(wallet, source) {
-    var addedElement = $scope.walletSongs.filter(function(song) {return song.url === source})[0];
-    var addedElementIndex = $scope.walletSongs.indexOf(addedElement);
-    $scope.walletSongs.splice(addedElementIndex, 1);
     songFactory.addSong(wallet, source).then(function(response) {
-      console.log("song added");
+      debugger
+      var addedElement = $scope.walletSongs.filter(function(song) {return song.url === source})[0];
+      var addedElementIndex = $scope.walletSongs.indexOf(addedElement);
+      $scope.walletSongs.splice(addedElementIndex, 1);
     });
   };
 }]);
