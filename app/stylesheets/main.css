@@ -326,9 +326,10 @@ select {
   width: 18%;
   height: 35px;
   margin-left: 0.5%;
+  margin-bottom: 10px;
 }
 
-/* line 195, ../sass/partials/_base.sass */
+/* line 196, ../sass/partials/_base.sass */
 input[name="addWallet"] {
   background-color: black;
   color: white;
@@ -339,13 +340,13 @@ input[name="addWallet"] {
   padding: 9px 0%;
   border-radius: 3px;
 }
-/* line 204, ../sass/partials/_base.sass */
+/* line 205, ../sass/partials/_base.sass */
 input[name="addWallet"]:hover {
   cursor: pointer;
   background-color: rgba(138, 18, 27, 0.92);
 }
 
-/* line 210, ../sass/partials/_base.sass */
+/* line 211, ../sass/partials/_base.sass */
 iframe {
   box-shadow: 0px 0px 4px 0px #494747;
   height: 235px;
