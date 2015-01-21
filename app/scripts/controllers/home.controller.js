@@ -7,7 +7,8 @@ app.controller('HomeController', ['$scope',
                                   'walletFactory',
                                   '$sce',
                                   'userFactory',
-                                  function($scope, authFactory, $location, dataFactory, walletFactory, $sce, userFactory) {
+                                  'songFactory',
+                                  function($scope, authFactory, $location, dataFactory, walletFactory, $sce, userFactory, songFactory) {
 
   dataFactory.fetchUsers().then(function(response) {
     $scope.currentUser = userFactory.findCurrentUser(response.data.users);
@@ -34,5 +35,14 @@ app.controller('HomeController', ['$scope',
   $scope.hoverOut = function(event) {
     $(event.delegateTarget).css("background-color", "#8e1e1e");
     $(event.delegateTarget).children().css("color", "white");
+  };
+
+  $scope.addToWallet = function(wallet, source) {
+    var addedElement = $scope.walletSongs.filter(function(song) {return song.url === source})[0];
+    var addedElementIndex = $scope.walletSongs.indexOf(addedElement);
+    $scope.walletSongs.splice(addedElementIndex, 1);
+    songFactory.addSong(wallet, source).then(function(response) {
+      console.log("song added");
+    });
   };
 }]);

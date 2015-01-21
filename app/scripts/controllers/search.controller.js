@@ -16,7 +16,6 @@ app.controller('SearchController', ['$scope',
     dataFactory.fetchTracksFromCloud(params).then(function(response) {
       $scope.trackSources = response.data.urls
     });
-    
   };
 
   $scope.fixUrl = function(source) {
