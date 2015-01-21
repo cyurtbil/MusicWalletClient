@@ -14,8 +14,17 @@ app.factory('songFactory', ['$http', 'ServerUrl', function($http, ServerUrl) {
     return $http.delete(ServerUrl + 'songs/' + song.id + '.json');
   };
 
+  var updateSong = function(wallet, song) {
+    var params = {song: {
+      url: song.url,
+      wallet_id: wallet.id
+    }};
+    return $http.put(ServerUrl + 'songs/' + song.id + '.json', params);
+  }; 
+
   return {
     addSong: addSong,
-    removeSong: removeSong
+    removeSong: removeSong,
+    updateSong: updateSong
   };
 }]);

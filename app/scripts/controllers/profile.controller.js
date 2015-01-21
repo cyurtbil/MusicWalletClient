@@ -31,4 +31,11 @@ app.controller('ProfileController', ['$scope',
       $scope.walletSongs.splice(removedElementIndex, 1);
     });
   };
+
+  $scope.MoveToWallet = function(wallet, song) {
+    songFactory.updateSong(wallet, song).then(function(response) {
+      var movedElementIndex = $scope.walletSongs.indexOf(song);
+      $scope.walletSongs.splice(movedElementIndex, 1);
+    });
+  };
 }]);
