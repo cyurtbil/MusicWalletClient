@@ -383,3 +383,13 @@ iframe {
   position: relative;
   top: 50px;
 }
+/* line 242, ../sass/partials/_base.sass */
+.user-info-wrapper .user-info .user-wallet-count .count {
+  color: #7b1212;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 51%;
+  width: 19px;
+  height: 17px;
+  display: inline-block;
+}

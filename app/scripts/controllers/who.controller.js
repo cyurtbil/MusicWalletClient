@@ -7,7 +7,7 @@ app.controller('WhoController', ['$scope', 'dataFactory', function($scope, dataF
   });
 
   $scope.getMaxUserWallet = function(user) {
-    var highestSongCountUserWallet = _.max(user.wallets, function(wallet) { return wallet.song_count;});
+    var highestSongCountUserWallet = _.max(user.wallets, function(wallet) { return wallet.song_count; });
     return [highestSongCountUserWallet.name, highestSongCountUserWallet.song_count];
   };
 
