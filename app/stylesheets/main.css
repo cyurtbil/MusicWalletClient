@@ -366,24 +366,27 @@ iframe {
   text-align: center;
   background-color: #7b1212;
   color: white;
+  box-shadow: -1px 1px 7px 1px rgba(0, 0, 0, 0.55);
+  opacity: 0.9;
 }
-/* line 232, ../sass/partials/_base.sass */
+/* line 234, ../sass/partials/_base.sass */
 .user-info-wrapper .user-info {
   position: relative;
   top: 62px;
 }
-/* line 235, ../sass/partials/_base.sass */
+/* line 237, ../sass/partials/_base.sass */
 .user-info-wrapper .user-info .username {
   position: relative;
   top: 28px;
   font-size: 1.8em;
+  text-shadow: 0px 2px 17px #040303;
 }
-/* line 239, ../sass/partials/_base.sass */
+/* line 242, ../sass/partials/_base.sass */
 .user-info-wrapper .user-info .user-wallet-count {
   position: relative;
   top: 50px;
 }
-/* line 242, ../sass/partials/_base.sass */
+/* line 245, ../sass/partials/_base.sass */
 .user-info-wrapper .user-info .user-wallet-count .count {
   color: #7b1212;
   background-color: white;
