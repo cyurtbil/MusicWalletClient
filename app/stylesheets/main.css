@@ -354,27 +354,32 @@ iframe {
 }
 
 /* line 220, ../sass/partials/_base.sass */
-.user-info {
+.user-info-wrapper {
   display: inline-block;
-  border: 1px solid #D3CFCF;
+  border: 1px solid #352F2F;
   float: left;
   position: relative;
-  width: 30%;
+  width: 25%;
   height: 300px;
-  margin: 36px 0% 0px 2%;
+  margin: 36px 0% 0px 5%;
   border-radius: 2px;
   text-align: center;
   background-color: #7b1212;
   color: white;
 }
 /* line 232, ../sass/partials/_base.sass */
-.user-info .username {
+.user-info-wrapper .user-info {
+  position: relative;
+  top: 62px;
+}
+/* line 235, ../sass/partials/_base.sass */
+.user-info-wrapper .user-info .username {
   position: relative;
   top: 28px;
   font-size: 1.8em;
 }
-/* line 236, ../sass/partials/_base.sass */
-.user-info .user-wallet-count {
+/* line 239, ../sass/partials/_base.sass */
+.user-info-wrapper .user-info .user-wallet-count {
   position: relative;
-  top: 40px;
+  top: 50px;
 }
