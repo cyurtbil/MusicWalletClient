@@ -352,3 +352,29 @@ iframe {
   height: 235px;
   width: 100%;
 }
+
+/* line 220, ../sass/partials/_base.sass */
+.user-info {
+  display: inline-block;
+  border: 1px solid #D3CFCF;
+  float: left;
+  position: relative;
+  width: 30%;
+  height: 300px;
+  margin: 36px 0% 0px 2%;
+  border-radius: 2px;
+  text-align: center;
+  background-color: #7b1212;
+  color: white;
+}
+/* line 232, ../sass/partials/_base.sass */
+.user-info .username {
+  position: relative;
+  top: 28px;
+  font-size: 1.8em;
+}
+/* line 236, ../sass/partials/_base.sass */
+.user-info .user-wallet-count {
+  position: relative;
+  top: 40px;
+}

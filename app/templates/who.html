@@ -1,5 +1,10 @@
 <ng-include src="'templates/navbar.html'"></ng-include>
 
 <div ng-controller="WhoController">
-  
+  <div ng-repeat="user in users">
+    <div class="user-info">
+      <p class="username">{{user.username}}</p>
+      <p class="user-wallet-count">{{getMaxUserWallet(user)[0]}}, {{getMaxUserWallet(user)[1]}}</p>
+    </div>
+  </div>
 </div>
