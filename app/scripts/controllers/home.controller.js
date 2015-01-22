@@ -8,7 +8,8 @@ app.controller('HomeController', ['$scope',
                                   '$sce',
                                   'userFactory',
                                   'songFactory',
-                                  function($scope, authFactory, $location, dataFactory, walletFactory, $sce, userFactory, songFactory) {
+                                  'colorService',
+                                  function($scope, authFactory, $location, dataFactory, walletFactory, $sce, userFactory, songFactory, colorService) {
 
   dataFactory.fetchUsers().then(function(response) {
     $scope.currentUser = userFactory.findCurrentUser(response.data.users);
@@ -29,7 +30,7 @@ app.controller('HomeController', ['$scope',
   };
 
   $scope.hoverIn = function(walletName, event) {
-    walletFactory.defineColor(walletName, event);
+    colorService.defineColor(walletName, event.delegateTarget);
   };
 
   $scope.hoverOut = function(event) {
