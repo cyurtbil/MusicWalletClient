@@ -386,6 +386,10 @@ iframe {
   top: 50px;
 }
 /* line 244, ../sass/partials/_base.sass */
+.user-info-wrapper .user-info .user-wallet-count a {
+  color: white;
+}
+/* line 246, ../sass/partials/_base.sass */
 .user-info-wrapper .user-info .user-wallet-count .count {
   color: #7b1212;
   background-color: white;

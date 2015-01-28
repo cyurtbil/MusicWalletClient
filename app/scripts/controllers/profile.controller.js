@@ -16,7 +16,7 @@ app.controller('ProfileController', ['$scope',
   $scope.viewSongs = function(wallet, wallets) {
     walletFactory.resetWalletActivation(wallets);
     wallet.active = true;
-    walletFactory.getWallet(wallet).then(function(response) {
+    walletFactory.getWallet(wallet.id).then(function(response) {
       $scope.walletSongs = response.data.songs;
     });
   }; 

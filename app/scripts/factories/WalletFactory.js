@@ -10,8 +10,8 @@ app.factory('walletFactory', ['$http', 'ServerUrl', function($http, ServerUrl) {
     return walletNames.filter(function(walletName, index, self) {return self.indexOf(walletName) === index;});
   };
 
-  var getWallet = function(wallet) {
-    return $http.get(ServerUrl + 'wallets/' + wallet.id + '.json');
+  var getWallet = function(walletId) {
+    return $http.get(ServerUrl + 'wallets/' + walletId + '.json');
   };
 
   var extractSongsFromClickedWallet = function(wallets, currentUser, walletName) {
@@ -39,10 +39,15 @@ app.factory('walletFactory', ['$http', 'ServerUrl', function($http, ServerUrl) {
     });
   };
 
+  var getWalletIdfromUrl = function(path) {
+    return parseInt(path.match(/\d+$/)[0]);
+  };
+
   return {
     createUniqueWalletNamesArray: createUniqueWalletNamesArray,
     getWallet: getWallet,
     extractSongsFromClickedWallet: extractSongsFromClickedWallet,
-    resetWalletActivation: resetWalletActivation
+    resetWalletActivation: resetWalletActivation,
+    getWalletIdfromUrl: getWalletIdfromUrl
   };
 }]);
