@@ -659,38 +659,66 @@ iframe {
     height: 350px;
   }
 }
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-  /* line 7, ../sass/partials/_search.sass */
+@media only screen and (min-width: 768px) and (max-width: 1204px) {
+  /* line 3, ../sass/partials/_search.sass */
   form[name="searchSongForm"] {
     margin-left: 6%;
   }
-  /* line 9, ../sass/partials/_search.sass */
+  /* line 5, ../sass/partials/_search.sass */
   form[name="searchSongForm"] input[name="search-bar"] {
     width: 80%;
   }
 }
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
-  /* line 15, ../sass/partials/_search.sass */
-  form[name="searchSongForm"] {
-    margin-left: 6%;
-  }
-  /* line 17, ../sass/partials/_search.sass */
-  form[name="searchSongForm"] input[name="search-bar"] {
-    width: 80%;
-  }
-}
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
-  /* line 23, ../sass/partials/_search.sass */
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  /* line 10, ../sass/partials/_search.sass */
   form[name="searchSongForm"] {
     margin-left: 0%;
   }
-  /* line 25, ../sass/partials/_search.sass */
+  /* line 12, ../sass/partials/_search.sass */
   form[name="searchSongForm"] input[name="search-bar"] {
     position: relative;
     top: -10px;
     width: 100%;
   }
-  /* line 29, ../sass/partials/_search.sass */
+  /* line 16, ../sass/partials/_search.sass */
+  form[name="searchSongForm"] input[name="search"] {
+    position: relative;
+    top: -3px;
+    width: 100%;
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  /* line 23, ../sass/partials/_search.sass */
+  form[name="searchSongForm"] {
+    margin-left: 6%;
+  }
+  /* line 25, ../sass/partials/_search.sass */
+  form[name="searchSongForm"] input[name="search-bar"] {
+    width: 80%;
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  /* line 31, ../sass/partials/_search.sass */
+  form[name="searchSongForm"] {
+    margin-left: 6%;
+  }
+  /* line 33, ../sass/partials/_search.sass */
+  form[name="searchSongForm"] input[name="search-bar"] {
+    width: 80%;
+  }
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
+  /* line 39, ../sass/partials/_search.sass */
+  form[name="searchSongForm"] {
+    margin-left: 0%;
+  }
+  /* line 41, ../sass/partials/_search.sass */
+  form[name="searchSongForm"] input[name="search-bar"] {
+    position: relative;
+    top: -10px;
+    width: 100%;
+  }
+  /* line 45, ../sass/partials/_search.sass */
   form[name="searchSongForm"] input[name="search"] {
     position: relative;
     top: -3px;
