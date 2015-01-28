@@ -456,6 +456,30 @@ iframe {
   font-size: 1.5em;
 }
 
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
+  /* line 5, ../sass/partials/_login.sass */
+  #register form,
+  #login form {
+    left: 0%;
+    width: 100%;
+  }
+  /* line 8, ../sass/partials/_login.sass */
+  #register form input,
+  #login form input {
+    margin: 25px 35px;
+  }
+  /* line 11, ../sass/partials/_login.sass */
+  #register .header-wrapper h1, #register .header-wrapper h2,
+  #login .header-wrapper h1,
+  #login .header-wrapper h2 {
+    display: inline-block;
+  }
+  /* line 13, ../sass/partials/_login.sass */
+  #register .header-wrapper h2,
+  #login .header-wrapper h2 {
+    left: -9%;
+  }
+}
 @media only screen and (min-width: 1204px) {
   /* line 3, ../sass/partials/_navbar.sass */
   #smartphone-navbar {
