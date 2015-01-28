@@ -1,7 +1,9 @@
 <ng-include src="'templates/navbar.html'"></ng-include>
 
 <div ng-controller="WalletController">
-  <h1>{{currentWallet.name}}</h1>
+  <div id="wallet-name-wrapper">
+    <h1>{{currentWallet.name}}</h1>
+  </div>
   <div ng-repeat="song in walletSongs" class="song-wrapper">
     <iframe scrolling="no" frameborder="no" src="{{fixUrl(song.url)}}"></iframe>
     <form name="walletForm" ng-submit="addToWallet(wallet, song)" novalidate>

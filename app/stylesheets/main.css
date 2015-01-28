@@ -399,3 +399,21 @@ iframe {
   height: 17px;
   display: inline-block;
 }
+
+/* line 256, ../sass/partials/_base.sass */
+#wallet-name-wrapper {
+  position: relative;
+  width: 100%;
+  background-color: rgba(75, 34, 33, 0.93);
+}
+/* line 260, ../sass/partials/_base.sass */
+#wallet-name-wrapper h1, #wallet-name-wrapper #register .header-wrapper h2, #register .header-wrapper #wallet-name-wrapper h2,
+#wallet-name-wrapper #login .header-wrapper h2,
+#login .header-wrapper #wallet-name-wrapper h2 {
+  color: white;
+  text-align: center;
+  height: 60px;
+  position: relative;
+  top: 19px;
+  font-size: 1.5em;
+}
