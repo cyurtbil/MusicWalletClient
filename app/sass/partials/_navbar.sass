@@ -12,14 +12,16 @@
     +rotate(0, 0, 45deg)
     transition-duration: 0.5s
     position: relative
-    top: 4px
+    top: 5px
+    left: 10px
   .line2
-    display: none
+    +rotate(0, 0, 90deg)
   .line3
     +rotate(0, 0, -45deg)
     transition-duration: 0.5s
     position: relative
-    bottom: 4px
+    bottom: 13px
+    right: 10px
 
   #smartphone-navbar
     height: 55px
@@ -63,26 +65,3 @@
         a 
           text-decoration: none
           color: rgba(255, 255, 255, 0.88)
-
-  // who page
-  .user-info-wrapper
-    width: 240px
-    height: 200px
-    margin: 36px 0% 0px 14%
-
-  // search page
-  form[name="searchSongForm"]
-    margin-left: 0%
-    input[name="search-bar"]
-      position: relative
-      top: -10px
-      width: 100%
-    input[name="search"]
-      position: relative
-      top: -3px
-      width: 100%
-
-  #user-wallets-wrapper
-    ul
-      overflow-y: scroll
-      height: 350px

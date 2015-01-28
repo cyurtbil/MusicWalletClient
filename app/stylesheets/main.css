@@ -444,38 +444,42 @@ iframe {
     transform: rotateX(0) rotateY(0) rotateZ(45deg);
     transition-duration: 0.5s;
     position: relative;
-    top: 4px;
+    top: 5px;
+    left: 10px;
   }
 
-  /* line 16, ../sass/partials/_navbar.sass */
+  /* line 17, ../sass/partials/_navbar.sass */
   .line2 {
-    display: none;
+    -webkit-transform: rotateX(0) rotateY(0) rotateZ(90deg);
+    -moz-transform: rotateX(0) rotateY(0) rotateZ(90deg);
+    transform: rotateX(0) rotateY(0) rotateZ(90deg);
   }
 
-  /* line 18, ../sass/partials/_navbar.sass */
+  /* line 19, ../sass/partials/_navbar.sass */
   .line3 {
     -webkit-transform: rotateX(0) rotateY(0) rotateZ(-45deg);
     -moz-transform: rotateX(0) rotateY(0) rotateZ(-45deg);
     transform: rotateX(0) rotateY(0) rotateZ(-45deg);
     transition-duration: 0.5s;
     position: relative;
-    bottom: 4px;
+    bottom: 13px;
+    right: 10px;
   }
 
-  /* line 24, ../sass/partials/_navbar.sass */
+  /* line 26, ../sass/partials/_navbar.sass */
   #smartphone-navbar {
     height: 55px;
     width: 100%;
     background-color: rgba(11, 5, 1, 0.83);
   }
-  /* line 28, ../sass/partials/_navbar.sass */
+  /* line 30, ../sass/partials/_navbar.sass */
   #smartphone-navbar #hamburger {
     float: right;
     position: relative;
     right: 19px;
     top: 8px;
   }
-  /* line 33, ../sass/partials/_navbar.sass */
+  /* line 35, ../sass/partials/_navbar.sass */
   #smartphone-navbar #hamburger .line {
     width: 31px;
     height: 5px;
@@ -483,7 +487,7 @@ iframe {
     margin: 4px 0px;
     border-radius: 2px;
   }
-  /* line 39, ../sass/partials/_navbar.sass */
+  /* line 41, ../sass/partials/_navbar.sass */
   #smartphone-navbar div#header {
     display: inline-block;
     position: relative;
@@ -494,27 +498,27 @@ iframe {
     font-size: 1.5em;
     left: 100px;
   }
-  /* line 46, ../sass/partials/_navbar.sass */
+  /* line 48, ../sass/partials/_navbar.sass */
   #smartphone-navbar div#header strong {
     text-align: center;
   }
-  /* line 48, ../sass/partials/_navbar.sass */
+  /* line 50, ../sass/partials/_navbar.sass */
   #smartphone-navbar div#header strong a {
     color: rgba(255, 255, 255, 0.88);
     text-decoration: none;
   }
 
-  /* line 52, ../sass/partials/_navbar.sass */
+  /* line 54, ../sass/partials/_navbar.sass */
   #collapse {
     border: 1px solid rgba(11, 5, 1, 0.83);
     background-color: rgba(11, 5, 1, 0.83);
   }
-  /* line 55, ../sass/partials/_navbar.sass */
+  /* line 57, ../sass/partials/_navbar.sass */
   #collapse ul {
     list-style: none;
     padding: 0px;
   }
-  /* line 58, ../sass/partials/_navbar.sass */
+  /* line 60, ../sass/partials/_navbar.sass */
   #collapse ul li {
     text-align: center;
     margin: 27px 0px;
@@ -523,39 +527,42 @@ iframe {
     transition: font-size 0.2s ease;
     font-size: 1.3em;
   }
-  /* line 63, ../sass/partials/_navbar.sass */
+  /* line 65, ../sass/partials/_navbar.sass */
   #collapse ul li a {
     text-decoration: none;
     color: rgba(255, 255, 255, 0.88);
   }
-
-  /* line 68, ../sass/partials/_navbar.sass */
-  .user-info-wrapper {
-    width: 240px;
-    height: 200px;
-    margin: 36px 0% 0px 14%;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
+  /* line 4, ../sass/partials/_profile.sass */
+  #user-wallets-wrapper ul {
+    overflow-y: scroll;
+    height: 350px;
   }
-
-  /* line 74, ../sass/partials/_navbar.sass */
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
+  /* line 3, ../sass/partials/_search.sass */
   form[name="searchSongForm"] {
     margin-left: 0%;
   }
-  /* line 76, ../sass/partials/_navbar.sass */
+  /* line 5, ../sass/partials/_search.sass */
   form[name="searchSongForm"] input[name="search-bar"] {
     position: relative;
     top: -10px;
     width: 100%;
   }
-  /* line 80, ../sass/partials/_navbar.sass */
+  /* line 9, ../sass/partials/_search.sass */
   form[name="searchSongForm"] input[name="search"] {
     position: relative;
     top: -3px;
     width: 100%;
   }
-
-  /* line 86, ../sass/partials/_navbar.sass */
-  #user-wallets-wrapper ul {
-    overflow-y: scroll;
-    height: 350px;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
+  /* line 3, ../sass/partials/_who.sass */
+  .user-info-wrapper {
+    width: 240px;
+    height: 200px;
+    margin: 36px 0% 0px 14%;
   }
 }
