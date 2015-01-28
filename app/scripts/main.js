@@ -2,7 +2,7 @@
 
 var app = angular.module('MusicWallet', ['ngRoute']);
 
-app.constant('ServerUrl', 'http://localhost:3000/');
+app.constant('ServerUrl', 'http://musicwallet2.herokuapp.com/');
 
 app.run(['$rootScope', 'authFactory', '$location', function($rootScope, authFactory, $location) {
 
