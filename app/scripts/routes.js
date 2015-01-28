@@ -21,6 +21,9 @@ app.config(['$routeProvider', function($routeProvider) {
   .when('/profile/:id', {
     templateUrl: 'templates/profile.html'
   })
+  .when('/wallet/:id', {
+    templateUrl: 'templates/wallet.html'
+  })
   .otherwise({
     redirectTo: '/login'
   });

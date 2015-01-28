@@ -1,18 +1,27 @@
 'use strict';
 
-app.controller('WhoController', ['$scope', 'dataFactory', 'colorService', function($scope, dataFactory, colorService) {
+app.controller('WhoController', ['$scope',
+                                 'dataFactory',
+                                 'colorService',
+                                 'walletFactory',
+                                 function($scope, dataFactory, colorService, walletFactory) {
+
+  $scope.search = {};
 
   dataFactory.fetchUsers().then(function(response) {
     $scope.users = response.data.users;
   });
 
+  dataFactory.fetchWallets().then(function(response) {
+    $scope.uniqueWalletNames = walletFactory.createUniqueWalletNamesArray(response.data.wallets);
+  });
+
   $scope.getMaxUserWallet = function(user) {
     var highestSongCountUserWallet = _.max(user.wallets, function(wallet) { return wallet.song_count; });
-    var walletName = highestSongCountUserWallet.name
+    var walletName = highestSongCountUserWallet.name;
+    var walletSongCount = highestSongCountUserWallet.song_count;
     colorService.defineColor(walletName, ("." + walletName));
-    return [highestSongCountUserWallet.name, highestSongCountUserWallet.song_count];
+    return [walletName, walletSongCount, highestSongCountUserWallet.id];
   };
-
-
 
 }]);
