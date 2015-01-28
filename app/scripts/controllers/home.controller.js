@@ -20,8 +20,11 @@ app.controller('HomeController', ['$scope',
     $scope.uniqueWalletNames = walletFactory.createUniqueWalletNamesArray(response.data.wallets);
   });
 
+  $scope.selected = false;
+
   $scope.viewSongsOfAll = function(walletName, event, wallets) {
     event.preventDefault();
+    $scope.selected = true;
     $scope.walletSongs = walletFactory.extractSongsFromClickedWallet(wallets, $scope.currentUser, walletName);
   };
 

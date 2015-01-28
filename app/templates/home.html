@@ -3,6 +3,8 @@
 <div ng-controller="HomeController">
   <span ng-repeat="walletName in uniqueWalletNames track by $index" class="wallet-name" ng-mouseenter="hoverIn(walletName, $event)" ng-mouseleave="hoverOut($event)"><a href="#/" title="{{walletName}}" ng-click="viewSongsOfAll(walletName, $event, wallets)">{{walletName}}</a></span>
   <hr>
+
+  <p id="select-wallet-message" ng-hide="selected">Select a Wallet</p>
   <div ng-repeat="song in walletSongs" class="song-wrapper">
     <iframe scrolling="no" frameborder="no" src="{{fixUrl(song.url)}}"></iframe>
     <form name="walletForm" ng-submit="addToWallet(wallet, song.url)" novalidate>
