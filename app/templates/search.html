@@ -3,7 +3,7 @@
 <div ng-controller="SearchController">
 
   <form name="searchSongForm" ng-submit="searchSongs(params)">
-    <input type="text" name="search-bar" size="100" placeholder="Search Songs by Name" ng-model="params.input">
+    <input type="text" name="search-bar" size="100" placeholder="Search Songs" ng-model="params.input">
     <input type="submit" name="search" value="Search">
   </form>
   <div ng-repeat="source in trackSources" class="song-wrapper">
@@ -14,6 +14,7 @@
       </select>
       <input type="submit" name="addWallet" value="Add to Wallet" ng-disabled="walletForm.$invalid">
     </form>
+    <hr>
   </div>
   
 </div>

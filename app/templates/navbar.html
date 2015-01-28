@@ -13,4 +13,22 @@
       </ul>
     </div>
   </div>
+
+  <div id="smartphone-navbar">
+      <div id="header"><strong><a href="#/" title="logo">MusicWallet</a></strong></div>
+      <div id="hamburger" ng-click="toggleNavbar(); changeHamburger()">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+  </div>
+
+    <div id="collapse" hidden>
+        <ul>
+          <li><a ng-href="#/who" title="who" ng-click="toggleNavbar(); changeHamburger()">Who?</a></li>
+          <li><a ng-href="#/search" ng-click="toggleNavbar(); changeHamburger()">Search</a></li>
+          <li><a ng-href="#/profile/{{currentUser.id}}" title="profile" ng-click="toggleNavbar(); changeHamburger()">Profile</a></li>
+          <li><a ng-href="#/login" ng-click="logout()" ng-click="toggleNavbar(); changeHamburger()">Logout</a></li>
+        </ul>
+    </div>
 </div>

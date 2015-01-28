@@ -1,0 +1,63 @@
+@media #{$smartphone}
+  
+  #navbar-wrapper
+    display: none
+    #navbar
+      display: none
+
+
+  .line1
+    +rotate(0, 0, 45deg)
+    transition-duration: 0.5s
+    position: relative
+    top: 4px
+  .line2
+    display: none
+  .line3
+    +rotate(0, 0, -45deg)
+    transition-duration: 0.5s
+    position: relative
+    bottom: 4px
+
+  #smartphone-navbar
+    height: 55px
+    width: 100%
+    background-color: rgba(11, 5, 1, 0.83)
+    #hamburger
+      float: right
+      position: relative
+      right: 19px
+      top: 8px
+      .line
+        width: 31px
+        height: 5px
+        background-color: white
+        margin: 4px 0px
+        border-radius: 2px
+    div#header
+      display: inline-block
+      position: relative
+      top: 13px
+      +transition(font-size, 0.2s, ease)
+      font-size: 1.5em
+      left: 100px
+      strong
+        text-align: center
+        a
+          color: rgba(255, 255, 255, 0.88)
+          text-decoration: none
+
+  #collapse
+    border: 1px solid rgba(11, 5, 1, 0.83)
+    background-color: rgba(11, 5, 1, 0.83)
+    ul
+      list-style: none
+      padding: 0px
+      li
+        text-align: center
+        margin: 27px 0px
+        +transition(font-size, 0.2s, ease)
+        font-size: 1.3em
+        a 
+          text-decoration: none
+          color: rgba(255, 255, 255, 0.88)
