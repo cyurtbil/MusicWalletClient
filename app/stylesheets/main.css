@@ -77,7 +77,7 @@ a:hover {
 #register .header-wrapper,
 #login .header-wrapper {
   position: relative;
-  top: 182px;
+  top: 100px;
   left: 10%;
   display: inline-block;
 }
@@ -101,16 +101,17 @@ a:hover {
 #register form,
 #login form {
   position: relative;
-  top: 216px;
+  top: 128px;
   left: 10%;
   border: 1px solid #bbc0bb;
   background-color: rgba(234, 227, 198, 0.8);
-  width: 351px;
-  height: 318px;
+  width: 368px;
+  height: 394px;
+  padding-top: 12px;
   text-align: center;
   box-shadow: 0px 2px 17px 0px rgba(186, 171, 171, 0.54);
 }
-/* line 45, ../sass/partials/_base.sass */
+/* line 46, ../sass/partials/_base.sass */
 #register form h3,
 #login form h3 {
   font-size: 1.3em;
@@ -118,17 +119,17 @@ a:hover {
   top: 10px;
   margin: 6px 0px;
 }
-/* line 50, ../sass/partials/_base.sass */
+/* line 51, ../sass/partials/_base.sass */
 #register form input,
 #login form input {
   display: block;
-  margin: 25px 54px;
+  margin: 25px 65px;
   border: 1px solid #fefdfe;
   border-radius: 1px;
   height: 33px;
   text-align: center;
 }
-/* line 57, ../sass/partials/_base.sass */
+/* line 58, ../sass/partials/_base.sass */
 #register form input[name="auth"],
 #login form input[name="auth"] {
   position: relative;
@@ -139,14 +140,14 @@ a:hover {
   background-color: rgba(68, 39, 32, 0.92);
   color: white;
 }
-/* line 65, ../sass/partials/_base.sass */
+/* line 66, ../sass/partials/_base.sass */
 #register form input[name="auth"]:hover,
 #login form input[name="auth"]:hover {
   background-color: rgba(138, 18, 27, 0.92);
   cursor: pointer;
 }
 
-/* line 71, ../sass/partials/_base.sass */
+/* line 72, ../sass/partials/_base.sass */
 .line1 {
   -webkit-transform: rotateX(0) rotateY(0) rotateZ(45deg);
   -moz-transform: rotateX(0) rotateY(0) rotateZ(45deg);
@@ -157,14 +158,14 @@ a:hover {
   left: 10px;
 }
 
-/* line 77, ../sass/partials/_base.sass */
+/* line 78, ../sass/partials/_base.sass */
 .line2 {
   -webkit-transform: rotateX(0) rotateY(0) rotateZ(90deg);
   -moz-transform: rotateX(0) rotateY(0) rotateZ(90deg);
   transform: rotateX(0) rotateY(0) rotateZ(90deg);
 }
 
-/* line 79, ../sass/partials/_base.sass */
+/* line 80, ../sass/partials/_base.sass */
 .line3 {
   -webkit-transform: rotateX(0) rotateY(0) rotateZ(-45deg);
   -moz-transform: rotateX(0) rotateY(0) rotateZ(-45deg);
@@ -175,49 +176,49 @@ a:hover {
   right: 10px;
 }
 
-/* line 87, ../sass/partials/_base.sass */
+/* line 88, ../sass/partials/_base.sass */
 #navbar-wrapper, #navbar-wrapper #navbar {
   height: 55px;
   width: 100%;
 }
-/* line 90, ../sass/partials/_base.sass */
+/* line 91, ../sass/partials/_base.sass */
 #navbar-wrapper #navbar {
   background-color: rgba(11, 5, 1, 0.83);
 }
-/* line 93, ../sass/partials/_base.sass */
+/* line 94, ../sass/partials/_base.sass */
 #navbar-wrapper #navbar li {
   display: inline-block;
   -webkit-transition: box-shadow 0.5s ease;
   -moz-transition: box-shadow 0.5s ease;
   transition: box-shadow 0.5s ease;
 }
-/* line 96, ../sass/partials/_base.sass */
+/* line 97, ../sass/partials/_base.sass */
 #navbar-wrapper #navbar li:hover {
   box-shadow: inset 0px -2px 31px 17px rgba(138, 18, 27, 0.92);
   cursor: pointer;
 }
-/* line 99, ../sass/partials/_base.sass */
+/* line 100, ../sass/partials/_base.sass */
 #navbar-wrapper #navbar li a {
   color: rgba(253, 254, 252, 0.91);
 }
-/* line 101, ../sass/partials/_base.sass */
+/* line 102, ../sass/partials/_base.sass */
 #navbar-wrapper #navbar ul#left-nav {
   float: left;
   width: 60%;
 }
-/* line 104, ../sass/partials/_base.sass */
+/* line 105, ../sass/partials/_base.sass */
 #navbar-wrapper #navbar ul#left-nav li {
   float: left;
   margin-left: 10%;
   padding: 19.5px 3%;
   font-size: 1.03em;
 }
-/* line 109, ../sass/partials/_base.sass */
+/* line 110, ../sass/partials/_base.sass */
 #navbar-wrapper #navbar ul#right-nav {
   float: right;
   width: 40%;
 }
-/* line 112, ../sass/partials/_base.sass */
+/* line 113, ../sass/partials/_base.sass */
 #navbar-wrapper #navbar ul#right-nav li {
   float: right;
   margin-right: 13%;
@@ -225,7 +226,7 @@ a:hover {
   font-size: 1.03em;
 }
 
-/* line 119, ../sass/partials/_base.sass */
+/* line 120, ../sass/partials/_base.sass */
 span.wallet-name {
   position: relative;
   display: inline-block;
@@ -234,13 +235,13 @@ span.wallet-name {
   padding: 5px 26px;
   border-radius: 3px;
 }
-/* line 126, ../sass/partials/_base.sass */
+/* line 127, ../sass/partials/_base.sass */
 span.wallet-name a {
   font-size: 1.03em;
   color: rgba(255, 255, 255, 0.93);
 }
 
-/* line 131, ../sass/partials/_base.sass */
+/* line 132, ../sass/partials/_base.sass */
 p#select-wallet-message {
   position: relative;
   top: 108px;
@@ -249,11 +250,11 @@ p#select-wallet-message {
   color: rgba(0, 0, 0, 0.66);
 }
 
-/* line 138, ../sass/partials/_base.sass */
+/* line 139, ../sass/partials/_base.sass */
 #profile-wrapper {
   color: white;
 }
-/* line 140, ../sass/partials/_base.sass */
+/* line 141, ../sass/partials/_base.sass */
 #profile-wrapper #left-side {
   position: fixed;
   float: left;
@@ -263,31 +264,31 @@ p#select-wallet-message {
   box-shadow: 0px 0px 26px 0px rgba(0, 0, 0, 0.66);
   background-color: rgba(75, 34, 33, 0.93);
 }
-/* line 148, ../sass/partials/_base.sass */
+/* line 149, ../sass/partials/_base.sass */
 #profile-wrapper #left-side #user-wallets-wrapper {
   margin: 0px;
 }
-/* line 151, ../sass/partials/_base.sass */
+/* line 152, ../sass/partials/_base.sass */
 #profile-wrapper #left-side #user-wallets-wrapper h4 {
   font-size: 1.3em;
   text-align: center;
 }
-/* line 154, ../sass/partials/_base.sass */
+/* line 155, ../sass/partials/_base.sass */
 #profile-wrapper #left-side #user-wallets-wrapper ul {
   text-align: center;
   overflow-y: scroll;
   box-shadow: 0px 0px 1px 0px white;
 }
-/* line 158, ../sass/partials/_base.sass */
+/* line 159, ../sass/partials/_base.sass */
 #profile-wrapper #left-side #user-wallets-wrapper ul li {
   padding: 10px 0%;
 }
-/* line 160, ../sass/partials/_base.sass */
+/* line 161, ../sass/partials/_base.sass */
 #profile-wrapper #left-side #user-wallets-wrapper ul li:hover {
   cursor: pointer;
   background-color: #7C2F2D;
 }
-/* line 163, ../sass/partials/_base.sass */
+/* line 164, ../sass/partials/_base.sass */
 #profile-wrapper #right-side {
   position: relative;
   float: right;
@@ -295,7 +296,7 @@ p#select-wallet-message {
   clear: left;
   height: 900px;
 }
-/* line 169, ../sass/partials/_base.sass */
+/* line 170, ../sass/partials/_base.sass */
 #profile-wrapper #right-side h1, #profile-wrapper #right-side #register .header-wrapper h2, #register .header-wrapper #profile-wrapper #right-side h2,
 #profile-wrapper #right-side #login .header-wrapper h2,
 #login .header-wrapper #profile-wrapper #right-side h2 {
@@ -306,16 +307,16 @@ p#select-wallet-message {
   padding: 10px 0%;
 }
 
-/* line 176, ../sass/partials/_base.sass */
+/* line 177, ../sass/partials/_base.sass */
 .walletactive {
   background-color: #7C2F2D;
 }
 
-/* line 179, ../sass/partials/_base.sass */
+/* line 180, ../sass/partials/_base.sass */
 .song-wrapper {
   margin-bottom: 14px;
 }
-/* line 181, ../sass/partials/_base.sass */
+/* line 182, ../sass/partials/_base.sass */
 .song-wrapper .remove-song {
   background-color: black;
   color: white;
@@ -323,25 +324,25 @@ p#select-wallet-message {
   padding: 11px 33px;
   width: 100%;
 }
-/* line 187, ../sass/partials/_base.sass */
+/* line 188, ../sass/partials/_base.sass */
 .song-wrapper .remove-song:hover {
   cursor: pointer;
   background-color: rgba(138, 18, 27, 0.92);
 }
 
-/* line 193, ../sass/partials/_base.sass */
+/* line 194, ../sass/partials/_base.sass */
 form[name="searchSongForm"] {
   position: relative;
   top: 254px;
   margin-left: 15%;
 }
-/* line 197, ../sass/partials/_base.sass */
+/* line 198, ../sass/partials/_base.sass */
 form[name="searchSongForm"] input[name="search-bar"] {
   border: 1px solid rgba(0, 0, 0, 0.22);
   border-radius: 1.5px;
   height: 39px;
 }
-/* line 201, ../sass/partials/_base.sass */
+/* line 202, ../sass/partials/_base.sass */
 form[name="searchSongForm"] input[name="search"] {
   background-color: black;
   color: white;
@@ -349,13 +350,13 @@ form[name="searchSongForm"] input[name="search"] {
   border-radius: 2px;
   padding: 11px 33px;
 }
-/* line 207, ../sass/partials/_base.sass */
+/* line 208, ../sass/partials/_base.sass */
 form[name="searchSongForm"] input[name="search"]:hover {
   cursor: pointer;
   background-color: rgba(138, 18, 27, 0.92);
 }
 
-/* line 211, ../sass/partials/_base.sass */
+/* line 212, ../sass/partials/_base.sass */
 select {
   background-color: black;
   color: white;
@@ -367,7 +368,7 @@ select {
   margin-bottom: 10px;
 }
 
-/* line 220, ../sass/partials/_base.sass */
+/* line 221, ../sass/partials/_base.sass */
 input[name="addWallet"] {
   background-color: black;
   color: white;
@@ -378,20 +379,20 @@ input[name="addWallet"] {
   padding: 9px 0%;
   border-radius: 3px;
 }
-/* line 229, ../sass/partials/_base.sass */
+/* line 230, ../sass/partials/_base.sass */
 input[name="addWallet"]:hover {
   cursor: pointer;
   background-color: rgba(138, 18, 27, 0.92);
 }
 
-/* line 235, ../sass/partials/_base.sass */
+/* line 236, ../sass/partials/_base.sass */
 iframe {
   box-shadow: 0px 0px 4px 0px #494747;
   height: 235px;
   width: 100%;
 }
 
-/* line 244, ../sass/partials/_base.sass */
+/* line 245, ../sass/partials/_base.sass */
 .user-info-wrapper {
   display: inline-block;
   float: left;
@@ -406,28 +407,28 @@ iframe {
   box-shadow: -1px 1px 7px 1px rgba(0, 0, 0, 0.55);
   opacity: 0.9;
 }
-/* line 257, ../sass/partials/_base.sass */
+/* line 258, ../sass/partials/_base.sass */
 .user-info-wrapper .user-info {
   position: relative;
   top: 30px;
 }
-/* line 260, ../sass/partials/_base.sass */
+/* line 261, ../sass/partials/_base.sass */
 .user-info-wrapper .user-info .username {
   position: relative;
   top: 28px;
   font-size: 1.8em;
   text-shadow: 0px 2px 17px #040303;
 }
-/* line 265, ../sass/partials/_base.sass */
+/* line 266, ../sass/partials/_base.sass */
 .user-info-wrapper .user-info .user-wallet-count {
   position: relative;
   top: 50px;
 }
-/* line 268, ../sass/partials/_base.sass */
+/* line 269, ../sass/partials/_base.sass */
 .user-info-wrapper .user-info .user-wallet-count a {
   color: white;
 }
-/* line 270, ../sass/partials/_base.sass */
+/* line 271, ../sass/partials/_base.sass */
 .user-info-wrapper .user-info .user-wallet-count .count {
   color: #7b1212;
   background-color: white;
@@ -438,13 +439,13 @@ iframe {
   display: inline-block;
 }
 
-/* line 280, ../sass/partials/_base.sass */
+/* line 281, ../sass/partials/_base.sass */
 #wallet-name-wrapper {
   position: relative;
   width: 100%;
   background-color: rgba(75, 34, 33, 0.93);
 }
-/* line 284, ../sass/partials/_base.sass */
+/* line 285, ../sass/partials/_base.sass */
 #wallet-name-wrapper h1, #wallet-name-wrapper #register .header-wrapper h2, #register .header-wrapper #wallet-name-wrapper h2,
 #wallet-name-wrapper #login .header-wrapper h2,
 #login .header-wrapper #wallet-name-wrapper h2 {
@@ -456,22 +457,22 @@ iframe {
   font-size: 1.5em;
 }
 
-/* line 294, ../sass/partials/_base.sass */
+/* line 295, ../sass/partials/_base.sass */
 #existing-error,
 #password-error,
 #login-error {
   background-color: rgba(201, 35, 35, 0.79);
   margin-top: 29px;
   color: white;
-  height: 50px;
+  height: 20px;
 }
-/* line 301, ../sass/partials/_base.sass */
+/* line 302, ../sass/partials/_base.sass */
 #existing-error p,
 #password-error p,
 #login-error p {
   text-align: center;
   position: relative;
-  top: 15px;
+  top: 3px;
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
