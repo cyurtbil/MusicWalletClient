@@ -11,12 +11,20 @@ app.controller('RegisterController', ['$scope',
     $('body').addClass('bg');
   });
 
+  $scope.doesPasswordsMatch = true;
+
   $scope.registerUser = function(user) {
     var userParams = {user: user};
-    debugger
-    userFactory.registerUser(userParams).then(function(response) {
-      authFactory.createUserSession(response.data);
-      $location.path('/');
-    });
+
+    if(user.password === user.password_confirmation) {
+      userFactory.registerUser(userParams).then(function(response) {
+        authFactory.createUserSession(response.data);
+        $location.path('/');
+      });
+    } else {
+      $scope.doesPasswordsMatch = false;
+      $('#password-error').slideDown(200);
+      $('#password-error').delay(3000).slideUp(200);
+    };
   };
 }]);

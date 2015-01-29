@@ -457,13 +457,15 @@ iframe {
 }
 
 /* line 294, ../sass/partials/_base.sass */
+#password-error,
 #login-error {
   background-color: rgba(201, 35, 35, 0.79);
   margin-top: 29px;
   color: white;
   height: 50px;
 }
-/* line 299, ../sass/partials/_base.sass */
+/* line 300, ../sass/partials/_base.sass */
+#password-error p,
 #login-error p {
   text-align: center;
   position: relative;
