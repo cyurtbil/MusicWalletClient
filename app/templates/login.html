@@ -8,7 +8,11 @@
 
   <form name="userLoginForm" ng-submit="login(user)" novalidate>
     <h3>LogIn</h3>
+    <div id="login-error" ng-hide="isLoginSuccessful">
+      <p>Invalid Username or Password.</p>
+    </div>
     <input type="text" name="username" placeholder="Enter Username" size="30" ng-model="user.username" required>
+
     <input type="password" name="password" placeholder="Enter Password" size="30" ng-model="user.password" required>
     <input type="submit" name="auth" value="Login" ng-disabled="userLoginForm.$invalid">
     <a href="#/register" title="Register Page">New to MusicWallet?</a>
