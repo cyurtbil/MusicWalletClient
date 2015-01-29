@@ -11,6 +11,10 @@
     <div id="password-error" ng-hide="doesPasswordsMatch">
       <p>Passwords does not match.</p>
     </div>
+
+    <div id="existing-error" ng-hide="doesExist">
+      <p>{{existingUsername}} is taken.</p>
+    </div>
     <input type="text" name="username" placeholder="Enter Username" size="30" ng-model="user.username" required>
     <input type="password" name="password" placeholder="Enter Password" size="30" ng-model="user.password" required>
     <input type="password" name="password-confirmation" placeholder="Re-enter Password" size="30" ng-model="user.password_confirmation" required>
